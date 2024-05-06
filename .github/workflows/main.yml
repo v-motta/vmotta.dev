@@ -1,0 +1,41 @@
+name: Build and Deploy
+
+on:
+  push:
+    branches:
+      - prd
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment: ssh-secrets
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.1.4
+
+      - name: Build Docker image
+        run: docker build -t ${{ vars.DOCKER_IMAGE }}:latest .
+
+      - name: Save Docker image as tar file
+        run: docker save -o ${{ vars.DOCKER_IMAGE }}.tar ${{ vars.DOCKER_IMAGE }}:latest
+
+      - name: Copy Docker image to remote server
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_KEY }}" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          scp -o StrictHostKeyChecking=no ${{ vars.DOCKER_IMAGE }}.tar ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:${{ secrets.SSH_PATH }}
+
+      - name: Load and remove Docker image on remote server
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'ENDSSH'
+          docker load -i ${{ secrets.SSH_PATH }}/${{ vars.DOCKER_IMAGE }}.tar
+          rm ${{ secrets.SSH_PATH }}/${{ vars.DOCKER_IMAGE }}.tar
+          ENDSSH
+
+      - name: Run Docker container on remote server
+        run: |
+          ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'ENDSSH'
+          sh ${{ secrets.SSH_PATH }}/run-cg-app.sh
+          ENDSSH
