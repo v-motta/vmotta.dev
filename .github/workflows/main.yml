@@ -36,5 +36,5 @@ jobs:
       - name: Run Docker container on remote server
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} << 'ENDSSH'
-          sh ${{ secrets.SSH_PATH }}/run-cg-app.sh
+          sh ${{ secrets.SSH_PATH }}/run-${{ vars.DOCKER_IMAGE }}.sh
           ENDSSH
