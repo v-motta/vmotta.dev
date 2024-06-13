@@ -2,8 +2,8 @@
 const nextConfig = {
   output: 'standalone',
   images: {
-    domains: ['github.com']
+    domains: ['github.com'],
   },
-};
+}
 
-export default nextConfig;
+export default nextConfig
