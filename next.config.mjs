@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'standalone',
-};
+  output: 'standalone',
+  images: {
+    domains: ['github.com'],
+  },
+}
 
-export default nextConfig;
+export default nextConfig
