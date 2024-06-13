@@ -1,8 +1,13 @@
 import Link from 'next/link'
 import { GithubIcon } from './github-icon'
 import { LinkedinIcon } from './linkedin-icon'
+import { useTranslation } from '../i18n'
+import { BrazilIcon } from './brazil-icon'
+import { USAIcon } from './usa-icon'
 
-export function Header() {
+export async function Header({ lng }: { lng: string }) {
+  const { t } = await useTranslation(`${lng}`, 'header')
+
   return (
     <nav className="flex items-center justify-between">
       <Link href="/" className="text-2xl font-extrabold text-white">
@@ -10,8 +15,8 @@ export function Header() {
       </Link>
 
       <div className="space-x-3">
-        <Link href="/projects">Projects</Link>
-        <Link href="/contact">Contact</Link>
+        <Link href="/projects">{t('projects')}</Link>
+        <Link href="/contact">{t('contact')}</Link>
       </div>
 
       <div className="flex items-center gap-3">
@@ -29,8 +34,11 @@ export function Header() {
             height={26}
           />
         </Link>
-        <Link href="/" locale="pt">
-          PT
+        <Link href="/pt">
+          <BrazilIcon width={30} height={30} />
+        </Link>
+        <Link href="/en">
+          <USAIcon width={30} height={30} />
         </Link>
       </div>
     </nav>
