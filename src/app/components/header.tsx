@@ -1,44 +1,35 @@
+import { GithubIcon, LinkedinIcon } from 'lucide-react'
 import Link from 'next/link'
-import { GithubIcon } from './github-icon'
-import { LinkedinIcon } from './linkedin-icon'
-import { useTranslation } from '../i18n'
-import { BrazilIcon } from './brazil-icon'
-import { USAIcon } from './usa-icon'
 
-export async function Header({ lng }: { lng: string }) {
-  const { t } = await useTranslation(`${lng}`, 'header')
-
+export async function Header() {
   return (
-    <nav className="flex items-center justify-between">
-      <Link href="/" className="text-2xl font-extrabold text-white">
+    <nav className="flex flex-col items-center justify-between md:flex-row">
+      <Link
+        href="/"
+        className="text-2xl font-extrabold text-white hover:text-zinc-200"
+      >
         v-motta
       </Link>
 
-      <div className="space-x-3">
-        <Link href="/projects">{t('projects')}</Link>
-        <Link href="/contact">{t('contact')}</Link>
+      <div className="mb-1.5 space-x-3 md:mb-0">
+        <Link href="/projects">Projects</Link>
+        <Link href="/contact">Contact</Link>
       </div>
 
       <div className="flex items-center gap-3">
-        <Link href="https://github.com/v-motta" className="group">
+        <Link href="https://github.com/v-motta">
           <GithubIcon
-            className="fill-zinc-600 group-hover:fill-zinc-400"
             width={28}
             height={28}
+            className="text-zinc-500 transition-colors hover:text-zinc-200"
           />
         </Link>
-        <Link href="https://github.com/v-motta" className="group">
+        <Link href="https://github.com/v-motta">
           <LinkedinIcon
-            className="fill-zinc-600 group-hover:fill-sky-400/65"
             width={26}
             height={26}
+            className="text-zinc-500 transition-colors hover:text-sky-300"
           />
-        </Link>
-        <Link href="/pt">
-          <BrazilIcon width={30} height={30} />
-        </Link>
-        <Link href="/en">
-          <USAIcon width={30} height={30} />
         </Link>
       </div>
     </nav>
