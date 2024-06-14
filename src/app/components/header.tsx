@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 export async function Header() {
   return (
-    <nav className="flex items-center justify-between">
+    <nav className="flex flex-col items-center justify-between md:flex-row">
       <Link
         href="/"
         className="text-2xl font-extrabold text-white hover:text-zinc-200"
@@ -11,7 +11,7 @@ export async function Header() {
         v-motta
       </Link>
 
-      <div className="space-x-3">
+      <div className="mb-1.5 space-x-3 md:mb-0">
         <Link href="/projects">Projects</Link>
         <Link href="/contact">Contact</Link>
       </div>
