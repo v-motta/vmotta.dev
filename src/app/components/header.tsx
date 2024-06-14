@@ -4,7 +4,10 @@ import Link from 'next/link'
 export async function Header() {
   return (
     <nav className="flex items-center justify-between">
-      <Link href="/" className="text-2xl font-extrabold text-white">
+      <Link
+        href="/"
+        className="text-2xl font-extrabold text-white hover:text-zinc-200"
+      >
         v-motta
       </Link>
 
@@ -15,10 +18,18 @@ export async function Header() {
 
       <div className="flex items-center gap-3">
         <Link href="https://github.com/v-motta">
-          <GithubIcon width={28} height={28} />
+          <GithubIcon
+            width={28}
+            height={28}
+            className="text-zinc-500 transition-colors hover:text-zinc-200"
+          />
         </Link>
         <Link href="https://github.com/v-motta">
-          <LinkedinIcon width={26} height={26} />
+          <LinkedinIcon
+            width={26}
+            height={26}
+            className="text-zinc-500 transition-colors hover:text-sky-300"
+          />
         </Link>
       </div>
     </nav>
