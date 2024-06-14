@@ -1,15 +1,7 @@
-import { useTranslation } from '@/app/i18n'
-
-export default async function Home({
-  params: { lng },
-}: {
-  params: { lng: string }
-}) {
-  const { t } = await useTranslation(lng)
-
+export default async function Home() {
   return (
     <main>
-      <h1>{t('key')}</h1>
+      <h1>Home page</h1>
     </main>
   )
 }
