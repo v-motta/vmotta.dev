@@ -6,7 +6,7 @@ export default async function Home() {
   return (
     <main className="flex flex-col items-center justify-center">
       <div className="flex w-full flex-col-reverse lg:grid lg:grid-cols-2">
-        <div className="mx-auto content-center px-16 text-center lg:text-start">
+        <div className="mx-auto content-center px-8 text-center sm:px-16 lg:text-start">
           <h1 className="font-mono text-xl font-bold xl:text-4xl 2xl:text-5xl">
             I am <span className="text-bracket">{'${'}</span>
             <span className="text-variable">Vinicius Motta</span>
@@ -16,9 +16,9 @@ export default async function Home() {
             Full-Stack Developer
           </h2>
           <p className="mb-8 text-zinc-400">
-            I am a Full-Stack developer, currently graduating a degree in
-            Computer Science, with professional experience in TypeScript, React,
-            Angular, Bootstrap, Go, Flutter, and DevOps.
+            Currently graduating a degree in Computer Science, with professional
+            experience in TypeScript, React, Angular, Bootstrap, Go, Flutter,
+            and DevOps.
           </p>
           <div className="flex items-center justify-center gap-4">
             <Link
