@@ -1,0 +1,41 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "to-do list",
+      "subtitle": "Simple to-do list app developed with the Rocketseat course.",
+      "description": "A to-do list app built with React, TypeScript and Vite, following the Rocketseat course. Completed in 2024",
+      "slug": "to-do-list",
+      "github": "https://github.com/v-motta/to-do-list-vite"
+    },
+    {
+      "id": 2,
+      "title": "Cost Guardian",
+      "subtitle": "Some subtitle.",
+      "description": "Some description.",
+      "slug": "cost-guardian"
+    },
+    {
+      "id": 3,
+      "title": "Seeliefy",
+      "subtitle": "Some subtitle.",
+      "description": "Some description.",
+      "slug": "seeliefy"
+    },
+    {
+      "id": 4,
+      "title": "Next Saas RBAC",
+      "subtitle": "Some subtitle.",
+      "description": "Some description.",
+      "slug": "next-saas-rbac"
+    },
+    {
+      "id": 5,
+      "title": "Love App",
+      "subtitle": "A app developed to show some pictures of my love.",
+      "description": "Some description.",
+      "slug": "love-app",
+      "github": "https://github.com/v-motta/love-app"
+    }
+  ]
+}
