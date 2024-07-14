@@ -7,9 +7,9 @@ export default async function PortfolioLayout({
   children: ReactNode
 }) {
   return (
-    <div className="mx-auto min-h-screen w-full space-y-5 p-8">
+    <div className="mx-auto min-h-screen w-screen">
       <Header />
-      {children}
+      <div className="p-8 pt-0">{children}</div>
     </div>
   )
 }
