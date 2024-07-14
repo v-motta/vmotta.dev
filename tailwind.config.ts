@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         bracket: '#f97180',
         variable: '#b392f0',
+        whatsapp: '#25D366',
+        linkedin: '#0A66C2',
       },
     },
   },
