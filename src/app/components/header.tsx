@@ -1,6 +1,7 @@
-import { GithubIcon, LinkedinIcon } from 'lucide-react'
 import Link from 'next/link'
 import { WhatsappIcon } from './icons/whatsapp-icon'
+import { LinkedinIcon } from './icons/linkedin-icon'
+import { GithubIcon } from './icons/github-icon'
 
 export async function Header() {
   return (
@@ -33,30 +34,18 @@ export async function Header() {
         </Link>
       </div>
 
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-4">
         <Link href="https://github.com/v-motta" className="group">
-          <GithubIcon
-            width={28}
-            height={28}
-            className="text-zinc-500 transition-colors group-hover:text-zinc-200"
-          />
+          <GithubIcon className="size-7 fill-zinc-500 transition-colors group-hover:fill-zinc-200" />
         </Link>
         <Link
           href="https://linkedin.com/in/viniciusmottadacosta/"
           className="group"
         >
-          <LinkedinIcon
-            width={26}
-            height={26}
-            className="text-zinc-500 transition-colors group-hover:text-sky-300"
-          />
+          <LinkedinIcon className="size-6 fill-zinc-500 transition-colors group-hover:fill-linkedin" />
         </Link>
         <Link href="https://wa.me/5511987977427" className="group">
-          <WhatsappIcon
-            width={28}
-            height={28}
-            className="fill-zinc-500 transition-colors group-hover:fill-whatsapp"
-          />
+          <WhatsappIcon className="size-7 fill-zinc-500 transition-colors group-hover:fill-whatsapp" />
         </Link>
       </div>
     </nav>
