@@ -65,13 +65,13 @@ export default async function HomePage() {
           </div>
           <div className="order-1 m-14 mb-10 mt-5 sm:m-36 sm:mb-10 sm:mt-5 md:m-28 lg:order-2 xl:block">
             <Image
-              src="/me.jpeg"
+              src="/myself.jpeg"
               width={672}
               height={896}
               quality={100}
               priority
               alt=""
-              className="mx-auto aspect-square rounded-full object-none object-[-150px] lg:object-center"
+              className="mx-auto aspect-square rounded-full object-cover"
             />
           </div>
         </div>
