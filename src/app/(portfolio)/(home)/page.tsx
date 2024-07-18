@@ -71,7 +71,7 @@ export default async function HomePage() {
               quality={100}
               priority
               alt=""
-              className="mx-auto aspect-square rounded-full object-none"
+              className="mx-auto aspect-square rounded-full object-none object-[-150px] lg:object-center"
             />
           </div>
         </div>
