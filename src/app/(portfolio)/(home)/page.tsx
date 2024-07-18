@@ -87,7 +87,7 @@ export default async function HomePage() {
           Newest projects
         </h2>
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 xl:px-8 2xl:px-40">
-          {data.projects.map((project) => (
+          {data.projects.slice(0, 5).map((project) => (
             <CardProject
               key={project.id}
               title={project.title}
@@ -115,13 +115,13 @@ export default async function HomePage() {
         className="my-10 h-px bg-zinc-50"
       />
 
-      <section id="technologies">
+      <section id="technologies" className="flex flex-col gap-8">
         <h2 className="text-center font-mono text-3xl font-bold">
           Main technologies
         </h2>
         <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:px-8 2xl:px-40">
           <div></div>
-          <div className="grid grid-cols-7 gap-5 *:h-14 *:w-14 *:fill-zinc-50">
+          <div className="grid grid-cols-4 gap-5 *:mx-auto *:h-14 *:w-14 *:fill-zinc-50 xl:grid-cols-7">
             <DockerIcon />
             <GithubIcon />
             <LinkedinIcon />
