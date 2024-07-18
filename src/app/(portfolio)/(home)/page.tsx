@@ -1,10 +1,21 @@
-import { CardProject } from './card-project'
-import { WhatsappIcon } from '@/app/components/icons/whatsapp-icon'
-import { GithubIcon, LinkedinIcon } from 'lucide-react'
+import { Button } from '@/app/components/button'
+import data from '@/app/data.json'
+import * as Separator from '@radix-ui/react-separator'
+import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
-
-import data from '@/app/data.json'
+import { CardProject } from './card-project'
+import {
+  DockerIcon,
+  GithubIcon,
+  GoIcon,
+  LinkedinIcon,
+  NextIcon,
+  PrismaIcon,
+  PythonIcon,
+  WhatsappIcon,
+  ZodIcon,
+} from '@/app/components/icons'
 
 export default async function HomePage() {
   return (
@@ -32,11 +43,7 @@ export default async function HomePage() {
                 rel="noopener noreferrer"
                 className="group rounded-full border border-zinc-500 p-3 hover:border-zinc-200"
               >
-                <GithubIcon
-                  width={28}
-                  height={28}
-                  className="text-zinc-500 transition-colors group-hover:text-zinc-200"
-                />
+                <GithubIcon className="size-7 fill-zinc-500 transition-colors group-hover:fill-zinc-200" />
               </Link>
               <Link
                 href="https://www.linkedin.com/in/viniciusmottadacosta/"
@@ -44,11 +51,7 @@ export default async function HomePage() {
                 rel="noopener noreferrer"
                 className="group rounded-full border border-zinc-500 p-3 hover:border-linkedin"
               >
-                <LinkedinIcon
-                  width={28}
-                  height={28}
-                  className="text-zinc-500 transition-colors group-hover:text-linkedin"
-                />
+                <LinkedinIcon className="size-6 fill-zinc-500 transition-colors group-hover:fill-linkedin" />
               </Link>
               <Link
                 href="https://wa.me/5511987977427"
@@ -56,11 +59,7 @@ export default async function HomePage() {
                 rel="noopener noreferrer"
                 className="group rounded-full border border-zinc-500 p-3 hover:border-whatsapp"
               >
-                <WhatsappIcon
-                  width={28}
-                  height={28}
-                  className="fill-zinc-500 transition-colors group-hover:fill-whatsapp"
-                />
+                <WhatsappIcon className="size-7 fill-zinc-500 transition-colors group-hover:fill-whatsapp" />
               </Link>
             </div>
           </div>
@@ -72,16 +71,22 @@ export default async function HomePage() {
               quality={100}
               priority
               alt=""
-              className="mx-auto aspect-square rounded-full object-cover"
+              className="mx-auto aspect-square rounded-full object-none"
             />
           </div>
         </div>
       </main>
-      <section id="projects">
-        <h2 className="mb-8 text-center font-mono text-3xl font-bold">
-          Projects
+
+      <Separator.Root
+        orientation="horizontal"
+        className="my-10 h-px bg-zinc-50"
+      />
+
+      <section id="projects" className="flex flex-col gap-8">
+        <h2 className="text-center font-mono text-3xl font-bold">
+          Newest projects
         </h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:px-40 xl:grid-cols-5">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 xl:px-8 2xl:px-40">
           {data.projects.map((project) => (
             <CardProject
               key={project.id}
@@ -91,6 +96,42 @@ export default async function HomePage() {
               github={project.github}
             />
           ))}
+        </div>
+        <div className="flex justify-center">
+          <Button asChild>
+            <Link
+              href="/projects"
+              className="flex items-center justify-center gap-3 text-center"
+            >
+              See all projects
+              <ArrowRight />
+            </Link>
+          </Button>
+        </div>
+      </section>
+
+      <Separator.Root
+        orientation="horizontal"
+        className="my-10 h-px bg-zinc-50"
+      />
+
+      <section id="technologies">
+        <h2 className="text-center font-mono text-3xl font-bold">
+          Main technologies
+        </h2>
+        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:px-8 2xl:px-40">
+          <div></div>
+          <div className="grid grid-cols-7 gap-5 *:h-14 *:w-14 *:fill-zinc-50">
+            <DockerIcon />
+            <GithubIcon />
+            <LinkedinIcon />
+            <PrismaIcon />
+            <PythonIcon />
+            <WhatsappIcon />
+            <ZodIcon />
+            <NextIcon />
+            <GoIcon />
+          </div>
         </div>
       </section>
     </>
