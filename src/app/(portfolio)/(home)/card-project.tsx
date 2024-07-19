@@ -12,7 +12,7 @@ export interface CardProjectProps {
 export function CardProject(props: CardProjectProps) {
   return (
     <div className="flex h-56 flex-col rounded-2xl border border-zinc-200 px-5 py-4 pb-5">
-      <div className="flex flex-1 flex-col gap-3">
+      <div className="flex flex-1 flex-col gap-3 text-center lg:text-start">
         <h1 className="font-mono text-xl font-bold">{props.title}</h1>
         <p className="line-clamp-2 text-zinc-300">{props.subtitle}</p>
       </div>
