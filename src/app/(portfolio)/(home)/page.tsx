@@ -119,9 +119,17 @@ export default async function HomePage() {
         <h2 className="text-center font-mono text-3xl font-bold">
           Main technologies
         </h2>
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-2 xl:px-8 2xl:px-40">
-          <div></div>
-          <div className="grid grid-cols-4 gap-5 *:mx-auto *:h-14 *:w-14 *:fill-zinc-50 xl:grid-cols-7">
+        <div className="xl:px-8 2xl:px-40">
+          {/* <div className="flex flex-col justify-center gap-3">
+            <h3 className="font-mono text-2xl font-semibold">Filter</h3>
+            <ul>
+              <li>Frontend</li>
+              <li>Backend</li>
+              <li>Database</li>
+              <li>DevOps</li>
+            </ul>
+          </div> */}
+          <div className="grid grid-cols-4 gap-10 *:mx-auto *:h-14 *:w-14 *:fill-zinc-50 xl:grid-cols-8">
             <DockerIcon />
             <GithubIcon />
             <LinkedinIcon />
