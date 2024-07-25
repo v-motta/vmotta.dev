@@ -7,12 +7,12 @@ export default function ProjectsPage() {
       {data.projects.map((project) => (
         <CardProject
           key={project.id}
-          image="https://github.com/v-motta.png"
+          image={project.pathImages}
           title={project.title}
           subtitle={project.subtitle}
           slug={project.slug}
           github={project.github}
-          deployUrl={project.deplyUrl}
+          deployUrl={project.deployUrl}
         />
       ))}
     </div>

@@ -13,7 +13,7 @@ export async function Header() {
         v-motta
       </Link>
 
-      <div className="mb-1.5 space-x-3 md:mb-0">
+      <div className="mb-1.5 space-x-3 font-mono md:mb-0">
         <Link
           href="/projects"
           className="hover:underline hover:underline-offset-8"

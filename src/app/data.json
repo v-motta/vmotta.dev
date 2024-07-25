@@ -7,7 +7,9 @@
       "description": "A to-do list app built with React, TypeScript and Vite, following the Rocketseat course. Completed in 2024",
       "slug": "to-do-list",
       "github": "https://github.com/v-motta/to-do-list-vite",
-      "deplyUrl": "https://todolist.vmotta.dev"
+      "deployUrl": "https://todolist.vmotta.dev",
+      "pathImages": ["/projects/todolist/todolist1.png", "/projects/todolist/todolist2.png", "/projects/todolist/todolist3.png"],
+      "technologies": ["React", "TypeScript", "Vite", "Docker", "GithubActions"]
     },
     {
       "id": 2,
@@ -21,7 +23,9 @@
       "title": "Seeliefy",
       "subtitle": "Some subtitle.",
       "description": "Some description.",
-      "slug": "seeliefy"
+      "slug": "seeliefy",
+      "pathImages": ["/projects/seeliefy/seeliefy1.png", "/projects/seeliefy/seeliefy2.png", "/projects/seeliefy/seeliefy3.png"],
+      "technologies": ["React", "TypeScript", "Docker", "GithubActions"]
     },
     {
       "id": 4,
@@ -36,7 +40,18 @@
       "subtitle": "A app developed to show some pictures of my love.",
       "description": "Some description.",
       "slug": "love-app",
-      "github": "https://github.com/v-motta/love-app"
+      "github": "https://github.com/v-motta/love-app",
+      "technologies": ["Angular", "TypeScript", "Docker", "GithubActions"],
+      "pathImages": ["/projects/loveapp/loveapp1.png"]
+    },
+    {
+      "id": 6,
+      "title": "My portfolio",
+      "subtitle": "A app developed to show some pictures of my love.",
+      "description": "Some description.",
+      "slug": "vmotta-dev",
+      "github": "https://github.com/v-motta/vmotta.dev",
+      "technologies": ["React", "TypeScript", "NextJS", "Docker", "GithubActions"]
     }
   ]
 }

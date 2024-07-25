@@ -2,10 +2,10 @@ import Link from 'next/link'
 import { Button } from '../../components/button'
 import { GithubIcon } from '../../components/icons/github-icon'
 import Image from 'next/image'
-import { Globe } from 'lucide-react'
+import { Globe, SearchX } from 'lucide-react'
 
 export interface CardProjectProps {
-  image: string
+  image?: string[]
   title: string
   subtitle: string
   slug: string
@@ -16,14 +16,21 @@ export interface CardProjectProps {
 export function CardProject(props: CardProjectProps) {
   return (
     <div className="flex flex-col gap-5 rounded-2xl border border-zinc-200 p-5">
-      <Image
-        src={props.image}
-        alt=""
-        width={500}
-        height={500}
-        quality={100}
-        className="aspect-video h-32 rounded-lg object-cover object-center"
-      />
+      {props.image ? (
+        <Image
+          src={props.image[0]}
+          alt=""
+          width={500}
+          height={500}
+          quality={50}
+          className="aspect-video h-32 rounded-lg object-cover object-center"
+        />
+      ) : (
+        <div className="flex h-32 items-center justify-center gap-3 rounded-lg text-sm font-bold text-zinc-400">
+          <SearchX />
+          <h1>Project without image</h1>
+        </div>
+      )}
       <div className="flex flex-1 flex-col gap-3 text-center lg:text-start">
         <h1 className="font-mono text-xl font-bold">{props.title}</h1>
         <p className="line-clamp-2 text-zinc-300">{props.subtitle}</p>
