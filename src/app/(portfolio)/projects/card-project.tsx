@@ -41,7 +41,12 @@ export function CardProject(props: CardProjectProps) {
         </Button>
         {props.github && (
           <Button variant="outline" className="px-2" asChild>
-            <Link href={props.github} target="_blank" rel="noopener noreferrer">
+            <Link
+              href={props.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Get to know the code of this project"
+            >
               <GithubIcon width={22} height={22} className="fill-zinc-50" />
             </Link>
           </Button>
