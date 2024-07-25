@@ -42,6 +42,7 @@ export default async function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group rounded-full border border-zinc-500 p-3 hover:border-zinc-200"
+                aria-label="Discover my GitHub and my project codes"
               >
                 <GithubIcon className="size-7 fill-zinc-500 transition-colors group-hover:fill-zinc-200" />
               </Link>
@@ -50,6 +51,7 @@ export default async function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group rounded-full border border-zinc-500 p-3 hover:border-linkedin"
+                aria-label="Check out my profile on Linkedin"
               >
                 <LinkedinIcon className="size-6 fill-zinc-500 transition-colors group-hover:fill-linkedin" />
               </Link>
@@ -58,6 +60,7 @@ export default async function HomePage() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group rounded-full border border-zinc-500 p-3 hover:border-whatsapp"
+                aria-label="Contact me via Whatsapp"
               >
                 <WhatsappIcon className="size-7 fill-zinc-500 transition-colors group-hover:fill-whatsapp" />
               </Link>
