@@ -35,16 +35,25 @@ export async function Header() {
       </div>
 
       <div className="flex items-center gap-4">
-        <Link href="https://github.com/v-motta" className="group">
+        <Link
+          href="https://github.com/v-motta"
+          className="group"
+          aria-label="Discover my GitHub and my project codes"
+        >
           <GithubIcon className="size-7 fill-zinc-500 transition-colors group-hover:fill-zinc-200" />
         </Link>
         <Link
           href="https://linkedin.com/in/viniciusmottadacosta/"
           className="group"
+          aria-label="Check out my profile on Linkedin"
         >
           <LinkedinIcon className="size-6 fill-zinc-500 transition-colors group-hover:fill-linkedin" />
         </Link>
-        <Link href="https://wa.me/5511987977427" className="group">
+        <Link
+          href="https://wa.me/5511987977427"
+          className="group"
+          aria-label="Contact me via Whatsapp"
+        >
           <WhatsappIcon className="size-7 fill-zinc-500 transition-colors group-hover:fill-whatsapp" />
         </Link>
       </div>
