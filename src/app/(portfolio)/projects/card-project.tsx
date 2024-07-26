@@ -57,6 +57,7 @@ export function CardProject(props: CardProjectProps) {
               href={props.deployUrl}
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="Discover the published project"
             >
               <Globe width={22} height={22} className="text-zinc-50" />
             </Link>
