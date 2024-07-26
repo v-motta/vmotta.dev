@@ -39,6 +39,8 @@ export async function Header() {
           href="https://github.com/v-motta"
           className="group"
           aria-label="Discover my GitHub and my project codes"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <GithubIcon className="size-7 fill-zinc-500 transition-colors group-hover:fill-zinc-200" />
         </Link>
@@ -46,6 +48,8 @@ export async function Header() {
           href="https://linkedin.com/in/viniciusmottadacosta/"
           className="group"
           aria-label="Check out my profile on Linkedin"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <LinkedinIcon className="size-6 fill-zinc-500 transition-colors group-hover:fill-linkedin" />
         </Link>
@@ -53,6 +57,8 @@ export async function Header() {
           href="https://wa.me/5511987977427"
           className="group"
           aria-label="Contact me via Whatsapp"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           <WhatsappIcon className="size-7 fill-zinc-500 transition-colors group-hover:fill-whatsapp" />
         </Link>
