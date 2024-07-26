@@ -9,7 +9,7 @@ export default async function PortfolioLayout({
   return (
     <div className="mx-auto min-h-screen w-screen">
       <Header />
-      <div className="p-8 pt-0">{children}</div>
+      <div className="p-8 py-0">{children}</div>
     </div>
   )
 }

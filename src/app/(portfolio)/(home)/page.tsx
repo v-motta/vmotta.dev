@@ -118,7 +118,7 @@ export default async function HomePage() {
         className="my-10 h-px bg-zinc-50"
       />
 
-      <section id="technologies" className="flex flex-col gap-8">
+      <section id="technologies" className="flex flex-col gap-8 pb-8">
         <h2 className="text-center font-mono text-3xl font-bold">
           Main technologies
         </h2>
