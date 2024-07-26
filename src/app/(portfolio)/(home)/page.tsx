@@ -1,4 +1,4 @@
-import { Button } from '@/app/components/button'
+import { Button } from '@/components/button'
 import data from '@/app/data.json'
 import * as Separator from '@radix-ui/react-separator'
 import { ArrowRight } from 'lucide-react'
@@ -15,7 +15,7 @@ import {
   PythonIcon,
   WhatsappIcon,
   ZodIcon,
-} from '@/app/components/icons'
+} from '@/components/icons'
 
 export default async function HomePage() {
   return (

@@ -1,34 +1,55 @@
 'use client'
 
-import { Button } from '@/app/components/button'
-import { LinkedinIcon, WhatsappIcon } from '@/app/components/icons'
-import * as Input from '@/app/components/input'
-import { Textarea } from '@/app/components/textarea'
+import { Button } from '@/components/button'
+import { LinkedinIcon, WhatsappIcon, LoadingIcon } from '@/components/icons'
+import * as Input from '@/components/input'
+import { Textarea } from '@/components/textarea'
 import {
   contactFormValidationSchema,
   type ContactFormValues,
-} from '@/app/schemas/contact-schema'
+} from '@/schemas/contact-schema'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { Check, Copy, Mail } from 'lucide-react'
 import Link from 'next/link'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
+import * as Separator from '@radix-ui/react-separator'
+import { toast } from 'sonner'
+import api from '@/services/api'
 
 export default function ContactPage() {
   const [emailCopied, setEmailCopied] = useState(false)
   const [numberCopied, setNumberCopied] = useState(false)
 
-  const { register, handleSubmit, formState } = useForm<ContactFormValues>({
-    resolver: zodResolver(contactFormValidationSchema),
-    defaultValues: {
-      name: '',
-      email: '',
-      message: '',
-    },
-  })
+  const [submitting, setSubmitting] = useState(false)
 
-  function handleContact(data: ContactFormValues) {
-    console.log(data)
+  const { register, handleSubmit, formState, reset } =
+    useForm<ContactFormValues>({
+      resolver: zodResolver(contactFormValidationSchema),
+      defaultValues: {
+        name: '',
+        email: '',
+        message: '',
+      },
+    })
+
+  async function handleContact(data: ContactFormValues) {
+    setSubmitting(true)
+
+    await api
+      .post('/send', data)
+      .then(() => {
+        toast.success('Message sent successfully!')
+        reset()
+      })
+      .catch((error) => {
+        toast.error(
+          `Failed to send message: ${error.response.data.message}. Please try again.`,
+        )
+      })
+      .finally(() => {
+        setSubmitting(false)
+      })
   }
 
   function handleCopyContact(contact: number) {
@@ -88,7 +109,7 @@ export default function ContactPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Mail className="size-6" /> E-mail
+                <Mail className="size-5" /> E-mail
               </Link>
             </Button>
             <div className="flex flex-col md:col-span-3">
@@ -121,6 +142,12 @@ export default function ContactPage() {
             </div>
           </div>
         </div>
+
+        <Separator.Root
+          orientation="horizontal"
+          className="h-px bg-white md:hidden"
+        />
+
         <div className="space-y-5">
           <h1 className="text-center font-mono text-3xl font-bold">
             Contact me
@@ -169,8 +196,8 @@ export default function ContactPage() {
               />
             </div>
 
-            <Button type="submit" className="mt-3 w-full">
-              Send message
+            <Button type="submit" className="mt-3 w-full" disabled={submitting}>
+              {submitting ? <LoadingIcon /> : 'Send message'}
             </Button>
           </form>
         </div>
