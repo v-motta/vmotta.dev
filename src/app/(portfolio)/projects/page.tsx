@@ -3,18 +3,20 @@ import { CardProject } from './card-project'
 
 export default function ProjectsPage() {
   return (
-    <div className="grid gap-5 py-8 md:grid-cols-2 lg:grid-cols-3 lg:py-0 xl:grid-cols-4 2xl:grid-cols-5">
-      {data.projects.map((project) => (
-        <CardProject
-          key={project.id}
-          image={project.pathImages}
-          title={project.title}
-          subtitle={project.subtitle}
-          slug={project.slug}
-          github={project.github}
-          deployUrl={project.deployUrl}
-        />
-      ))}
+    <div className="xl:min-h-[calc(100vh-6rem-6rem)]">
+      <div className="grid gap-5 py-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:py-0 2xl:grid-cols-5">
+        {data.projects.map((project) => (
+          <CardProject
+            key={project.id}
+            image={project.pathImages}
+            title={project.title}
+            subtitle={project.subtitle}
+            slug={project.slug}
+            github={project.github}
+            deployUrl={project.deployUrl}
+          />
+        ))}
+      </div>
     </div>
   )
 }

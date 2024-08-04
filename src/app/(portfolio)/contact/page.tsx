@@ -67,7 +67,7 @@ export default function ContactPage() {
   }
 
   return (
-    <div className="flex flex-col py-5 md:py-0 lg:h-[calc(100vh-6rem)]">
+    <div className="flex flex-col py-8 md:py-0 lg:min-h-[calc(100vh-6rem-6rem)]">
       <div className="my-auto grid gap-x-8 gap-y-5 lg:grid-cols-2">
         <div className="flex flex-col items-center justify-center space-y-8">
           <h1 className="text-center font-mono text-3xl font-bold">
