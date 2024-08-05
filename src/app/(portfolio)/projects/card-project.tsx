@@ -20,9 +20,9 @@ export function CardProject(props: CardProjectProps) {
         <Image
           src={props.image[0]}
           alt=""
-          width={500}
-          height={500}
-          quality={50}
+          width={400}
+          height={400}
+          quality={1}
           className="aspect-video h-32 rounded-lg object-cover object-center"
         />
       ) : (
