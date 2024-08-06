@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import { Button } from '../../../components/button'
-import { GithubIcon } from '../../../components/icons/github-icon'
+import { Button } from '@/components/button'
+import { GithubIcon } from '@/components/icons'
 
 export interface CardProjectProps {
   title: string

@@ -1,7 +1,5 @@
 import Link from 'next/link'
-import { WhatsappIcon } from './icons/whatsapp-icon'
-import { LinkedinIcon } from './icons/linkedin-icon'
-import { GithubIcon } from './icons/github-icon'
+import { GithubIcon, LinkedinIcon, WhatsappIcon } from './icons'
 
 export async function Header() {
   return (
