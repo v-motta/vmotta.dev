@@ -1,57 +1,118 @@
 {
   "projects": [
     {
-      "id": 1,
-      "title": "to-do list",
-      "subtitle": "Simple to-do list app developed with the Rocketseat course.",
-      "description": "A to-do list app built with React, TypeScript and Vite, following the Rocketseat course. Completed in 2024",
+      "id": "5a2a0def-b204-4a5e-8b08-fa2c796ce0e6",
+      "title": "[Backend] Next Saas RBAC",
+      "subtitle": "Some subtitle.",
+      "description": "Some description.",
+      "slug": "next-saas-rbac",
+      "technologies": [
+        "nodejs",
+        "typescript",
+        "docker",
+        "prisma"
+      ]
+    },
+    {
+      "id": "c29715fe-1304-4764-859e-9e481f14c9b2",
+      "title": "[Frontend] Next Saas RBAC",
+      "subtitle": "Some subtitle.",
+      "description": "Some description.",
+      "slug": "next-saas-rbac",
+      "technologies": [
+        "react",
+        "typescript",
+        "next"
+      ]
+    },
+    {
+      "id": "56fd593c-a391-4bed-9e76-13d9a4901b48",
+      "title": "To-Do List",
+      "subtitle": "A simple and efficient to-do list app developed through the Rocketseat course.",
+      "description": "This to-do list application, completed in 2024, leverages React, TypeScript, and Vite for a modern and responsive user experience. Following the comprehensive Rocketseat course, the project showcases best practices in frontend development. The app is containerized using Docker and employs GitHub Actions for CI/CD pipelines.",
       "slug": "to-do-list",
       "github": "https://github.com/v-motta/to-do-list-vite",
       "deployUrl": "https://todolist.vmotta.dev",
-      "pathImages": ["/projects/todolist/todolist1.png", "/projects/todolist/todolist2.png", "/projects/todolist/todolist3.png"],
-      "technologies": ["React", "TypeScript", "Vite", "Docker", "GithubActions"]
+      "pathImages": [
+        "/projects/todolist/todolist1.png",
+        "/projects/todolist/todolist2.png",
+        "/projects/todolist/todolist3.png"
+      ],
+      "technologies": [
+        "react",
+        "typescript",
+        "vite",
+        "docker",
+        "githubactions",
+        "github"
+      ]
     },
     {
-      "id": 2,
-      "title": "Cost Guardian",
-      "subtitle": "Some subtitle.",
-      "description": "Some description.",
-      "slug": "cost-guardian"
+      "id": "b52d31fd-a9a4-44a3-ab95-35ce9eab19b1",
+      "title": "[Backend] Cost Guardian",
+      "subtitle": "Project not finished.",
+      "description": "Project not finished.",
+      "slug": "cost-guardian-backend",
+      "technologies": []
     },
     {
-      "id": 3,
+      "id": "0a1e5073-ea76-4923-8f90-436f57125c06",
+      "title": "[Frontend] Cost Guardian",
+      "subtitle": "Project not finished.",
+      "description": "Project not finished.",
+      "slug": "cost-guardian-frontend",
+      "technologies": []
+    },
+    {
+      "id": "37a15a76-ebd0-4737-91f8-c5dcc1f641d0",
       "title": "Seeliefy",
       "subtitle": "Some subtitle.",
       "description": "Some description.",
       "slug": "seeliefy",
-      "pathImages": ["/projects/seeliefy/seeliefy1.png", "/projects/seeliefy/seeliefy2.png", "/projects/seeliefy/seeliefy3.png"],
-      "technologies": ["React", "TypeScript", "Docker", "GithubActions"]
+      "pathImages": [
+        "/projects/seeliefy/seeliefy1.png",
+        "/projects/seeliefy/seeliefy2.png",
+        "/projects/seeliefy/seeliefy3.png"
+      ],
+      "technologies": [
+        "react",
+        "typescript",
+        "docker",
+        "githubactions"
+      ]
     },
     {
-      "id": 4,
-      "title": "Next Saas RBAC",
-      "subtitle": "Some subtitle.",
-      "description": "Some description.",
-      "slug": "next-saas-rbac"
-    },
-    {
-      "id": 5,
+      "id": "7f0d6818-ecc8-41c7-a449-30b8d5d86771",
       "title": "Love App",
       "subtitle": "A app developed to show some pictures of my love.",
       "description": "Some description.",
       "slug": "love-app",
       "github": "https://github.com/v-motta/love-app",
-      "technologies": ["Angular", "TypeScript", "Docker", "GithubActions"],
-      "pathImages": ["/projects/loveapp/loveapp1.png"]
+      "deployUrl": "https://love.vmotta.dev",
+      "pathImages": [
+        "/projects/loveapp/loveapp1.png"
+      ],
+      "technologies": [
+        "angular",
+        "typescript",
+        "docker",
+        "githubactions"
+      ]
     },
     {
-      "id": 6,
+      "id": "a637a206-d721-4b8a-8f8b-2e6804f5f562",
       "title": "My portfolio",
-      "subtitle": "A app developed to show some pictures of my love.",
+      "subtitle": "My portfolio website.",
       "description": "Some description.",
       "slug": "vmotta-dev",
       "github": "https://github.com/v-motta/vmotta.dev",
-      "technologies": ["React", "TypeScript", "NextJS", "Docker", "GithubActions"]
+      "technologies": [
+        "react",
+        "typescript",
+        "nextjs",
+        "docker",
+        "githubactions"
+      ]
     }
   ]
 }
