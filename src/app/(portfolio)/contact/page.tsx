@@ -16,6 +16,7 @@ import { useForm } from 'react-hook-form'
 import * as Separator from '@radix-ui/react-separator'
 import { toast } from 'sonner'
 import api from '@/services/api'
+import { Title } from '@/components/title'
 
 export default function ContactPage() {
   const [emailCopied, setEmailCopied] = useState(false)
@@ -70,9 +71,7 @@ export default function ContactPage() {
     <div className="flex flex-col py-8 md:py-0 lg:min-h-[calc(100vh-6rem-6rem)]">
       <div className="my-auto grid gap-x-8 gap-y-5 lg:grid-cols-2">
         <div className="flex flex-col items-center justify-center space-y-8">
-          <h1 className="text-center font-mono text-3xl font-bold">
-            Ways to contact me
-          </h1>
+          <Title title="Ways to contact me" className="text-2xl xl:text-3xl" />
           <div className="grid gap-5 md:grid-cols-3 md:px-16 lg:px-0 xl:px-16 2xl:px-36">
             <Button
               asChild
@@ -149,9 +148,7 @@ export default function ContactPage() {
         />
 
         <div className="space-y-5">
-          <h1 className="text-center font-mono text-3xl font-bold">
-            Contact me
-          </h1>
+          <Title title="Contact me" className="text-2xl xl:text-3xl" />
           <form
             onSubmit={handleSubmit(handleContact)}
             className="flex flex-col gap-3 md:px-16 lg:px-0 xl:px-16 2xl:px-36"
