@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   title: 'Vinicius Motta',
   description:
     'A simple portfolio of Vinicius Motta that contains some of my projects',
+  keywords: [
+    'vinicius motta',
+    'portfolio',
+    'software developer',
+    'web development',
+    'next.js',
+    'typescript',
+    'javascript',
+    'tailwindcss',
+    'prisma',
+    'react',
+    'nodejs',
+  ],
 }
 
 export default function RootLayout({

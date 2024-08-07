@@ -1,11 +1,9 @@
 import Link from 'next/link'
-import { WhatsappIcon } from './icons/whatsapp-icon'
-import { LinkedinIcon } from './icons/linkedin-icon'
-import { GithubIcon } from './icons/github-icon'
+import { GithubIcon, LinkedinIcon, WhatsappIcon } from './icons'
 
 export async function Header() {
   return (
-    <nav className="sticky top-0 flex flex-col items-center justify-between gap-3 border-b border-zinc-500 bg-zinc-950 bg-opacity-95 pb-3 pt-2 md:h-24 md:flex-row md:border-none md:px-8 md:py-8">
+    <nav className="sticky top-0 z-50 flex flex-col items-center justify-between gap-3 border-b border-zinc-500 bg-zinc-950 bg-opacity-95 pb-3 pt-2 md:h-24 md:flex-row md:border-none md:px-8 md:py-8">
       <Link
         href="/"
         className="text-2xl font-extrabold text-white hover:text-zinc-200"
