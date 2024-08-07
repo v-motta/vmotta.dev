@@ -1,27 +1,44 @@
 import { Button } from '@/components/button'
 import data from '@/app/data.json'
 import * as Separator from '@radix-ui/react-separator'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, ChevronDown, Mouse } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CardProject } from './card-project'
-import {
-  DockerIcon,
-  GithubIcon,
-  GoIcon,
-  LinkedinIcon,
-  NextIcon,
-  PrismaIcon,
-  PythonIcon,
-  WhatsappIcon,
-  ZodIcon,
-} from '@/components/icons'
+import { GithubIcon, LinkedinIcon, WhatsappIcon } from '@/components/icons'
+import { Title } from '@/components/title'
+import { iconsNode } from '@/components/icons/icon-node'
 
 export default async function HomePage() {
+  const mainTechnologies = [
+    'aws',
+    'cloudflare',
+    'cypress',
+    'docker',
+    'fastify',
+    'flask',
+    'git',
+    'gitea',
+    'githubactions',
+    'github',
+    'golang',
+    'javascript',
+    'next',
+    'nodejs',
+    'prisma',
+    'python',
+    'react',
+    'tailwind',
+    'traefik',
+    'typescript',
+    'vite',
+    'zod',
+  ]
+
   return (
     <>
       <main className="flex flex-col items-center justify-center xl:h-[calc(100vh-6rem)]">
-        <div className="grid py-10 lg:grid-cols-2">
+        <div className="relative grid py-10 lg:grid-cols-2 lg:py-0">
           <div className="order-2 content-center px-8 text-center sm:px-16 sm:ps-32 lg:text-start">
             <h1 className="font-mono text-xl font-bold xl:text-4xl 2xl:text-5xl">
               I am <span className="text-bracket">{'${'}</span>
@@ -77,20 +94,27 @@ export default async function HomePage() {
               className="mx-auto aspect-square rounded-full object-cover"
             />
           </div>
+          <Mouse className="absolute bottom-16 left-1/2 hidden size-9 -translate-x-1/2 text-white lg:block" />
+          <ChevronDown
+            className="absolute bottom-8 left-1/2 hidden size-7 animate-bounce text-bracket lg:block"
+            style={{ translate: '-50%' }}
+          />
+          <ChevronDown
+            className="absolute bottom-6 left-1/2 hidden size-7 translate-x-1/2 animate-bounce text-bracket lg:block"
+            style={{ translate: '-50%' }}
+          />
         </div>
       </main>
 
       <Separator.Root
         orientation="horizontal"
-        className="my-10 h-px bg-zinc-50"
+        className="mb-10 h-px bg-zinc-50"
       />
 
       <section id="projects" className="flex flex-col gap-8">
-        <h2 className="text-center font-mono text-3xl font-bold">
-          Newest projects
-        </h2>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 xl:px-8 2xl:px-40">
-          {data.projects.slice(0, 5).map((project) => (
+        <Title title="Newest Projects" />
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 xl:px-8 2xl:px-40">
+          {data.projects.slice(0, 4).map((project) => (
             <CardProject
               key={project.id}
               title={project.title}
@@ -119,9 +143,7 @@ export default async function HomePage() {
       />
 
       <section id="technologies" className="flex flex-col gap-8 pb-8">
-        <h2 className="text-center font-mono text-3xl font-bold">
-          Main technologies
-        </h2>
+        <Title title="Main Technologies" />
         <div className="xl:px-8 2xl:px-40">
           {/* <div className="flex flex-col justify-center gap-3">
             <h3 className="font-mono text-2xl font-semibold">Filter</h3>
@@ -132,16 +154,10 @@ export default async function HomePage() {
               <li>DevOps</li>
             </ul>
           </div> */}
-          <div className="grid grid-cols-4 gap-10 *:mx-auto *:h-14 *:w-14 *:fill-zinc-50 xl:grid-cols-8">
-            <DockerIcon />
-            <GithubIcon />
-            <LinkedinIcon />
-            <PrismaIcon />
-            <PythonIcon />
-            <WhatsappIcon />
-            <ZodIcon />
-            <NextIcon />
-            <GoIcon />
+          <div className="grid grid-cols-5 gap-8 *:mx-auto *:size-full *:fill-zinc-50 lg:gap-16 xl:grid-cols-12">
+            {mainTechnologies.map((tech) => (
+              <div key={tech}>{iconsNode[tech]}</div>
+            ))}
           </div>
         </div>
       </section>
