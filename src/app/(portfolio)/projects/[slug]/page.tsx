@@ -17,14 +17,14 @@ export default function ProjectBySlugPage({ params }: ProjectBySlugProps) {
 
   if (!project) {
     return (
-      <div className="mt-10 text-center text-3xl font-bold lg:min-h-[calc(100vh-6rem-6rem)]">
+      <div className="mt-10 text-center text-3xl font-bold lg:min-h-[calc(100vh-6rem-4rem)]">
         Project not found
       </div>
     )
   }
 
   return (
-    <div className="py-8 lg:min-h-[calc(100vh-6rem-6rem)]">
+    <div className="py-8 lg:min-h-[calc(100vh-6rem-4rem)]">
       <div className="grid grid-cols-2 gap-5 md:px-16 lg:px-0 xl:px-16 2xl:px-36">
         {project.pathImages && (
           <>
@@ -68,7 +68,7 @@ export default function ProjectBySlugPage({ params }: ProjectBySlugProps) {
               title="Technologies used"
               className="mb-5 text-lg lg:text-start"
             />
-            <div className="grid grid-cols-4 gap-y-5 *:mx-auto *:size-10 *:fill-zinc-100 md:grid-cols-7 lg:gap-x-8 *:lg:size-full">
+            <div className="grid grid-cols-4 gap-y-5 *:mx-auto *:size-8 *:fill-zinc-100 md:grid-cols-7 lg:gap-x-8 *:lg:size-9">
               {project.technologies.map((tech) => (
                 <div key={tech} className="*:size-full">
                   {iconsNode[tech]}
@@ -89,9 +89,9 @@ export default function ProjectBySlugPage({ params }: ProjectBySlugProps) {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group mx-auto lg:size-10"
+                  className="group mx-auto size-8 lg:size-9"
                 >
-                  <GithubIcon className="size-10 fill-zinc-500 transition-colors group-hover:fill-zinc-200 lg:size-full" />
+                  <GithubIcon className="size-full fill-zinc-500 transition-colors group-hover:fill-zinc-200" />
                 </Link>
               )}
               {project.deployUrl && (
@@ -99,9 +99,9 @@ export default function ProjectBySlugPage({ params }: ProjectBySlugProps) {
                   href={project.deployUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group mx-auto"
+                  className="group mx-auto size-8 lg:size-9"
                 >
-                  <Globe className="size-10 text-zinc-500 transition-colors group-hover:text-zinc-200 lg:size-full" />
+                  <Globe className="size-full text-zinc-500 transition-colors group-hover:text-zinc-200" />
                 </Link>
               )}
             </div>

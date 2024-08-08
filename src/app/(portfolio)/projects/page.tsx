@@ -4,7 +4,7 @@ import { Title } from '@/components/title'
 
 export default function ProjectsPage() {
   return (
-    <div className="xl:min-h-[calc(100vh-6rem-6rem)]">
+    <div className="xl:min-h-[calc(100vh-6rem-4rem)]">
       <Title title="Projects" className="mt-8 lg:mt-0" />
       <div className="grid gap-5 py-8 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
         {data.projects.map((project) => (
