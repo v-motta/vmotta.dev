@@ -70,7 +70,9 @@ export default function ProjectBySlugPage({ params }: ProjectBySlugProps) {
             />
             <div className="grid grid-cols-4 gap-y-5 *:mx-auto *:size-10 *:fill-zinc-100 md:grid-cols-7 lg:gap-x-8 *:lg:size-full">
               {project.technologies.map((tech) => (
-                <div key={tech}>{iconsNode[tech]}</div>
+                <div key={tech} className="*:size-full">
+                  {iconsNode[tech]}
+                </div>
               ))}
             </div>
           </div>
@@ -87,7 +89,7 @@ export default function ProjectBySlugPage({ params }: ProjectBySlugProps) {
                   href={project.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group mx-auto"
+                  className="group mx-auto lg:size-10"
                 >
                   <GithubIcon className="size-10 fill-zinc-500 transition-colors group-hover:fill-zinc-200 lg:size-full" />
                 </Link>
