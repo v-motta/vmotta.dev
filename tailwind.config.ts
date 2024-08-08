@@ -21,6 +21,7 @@ const config: Config = {
         vite: '#646CFF',
         gitea: '#609926',
         git: '#F05032',
+        githubactions: '#2088FF',
         node: '#5FA04E',
         aws: '#232F3E',
         cloudflare: '#F38020',
