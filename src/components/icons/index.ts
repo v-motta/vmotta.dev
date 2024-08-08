@@ -1,4 +1,5 @@
 export { AWSIcon } from './aws'
+export { BootstrapIcon } from './bootstrap'
 export { CloudflareIcon } from './cloudflare'
 export { CypressIcon } from './cypress'
 export { DockerIcon } from './docker'

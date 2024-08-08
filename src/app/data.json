@@ -66,9 +66,11 @@
     {
       "id": "37a15a76-ebd0-4737-91f8-c5dcc1f641d0",
       "title": "Seeliefy",
-      "subtitle": "Some subtitle.",
-      "description": "Some description.",
+      "subtitle": "A simple institutional website for Game Studio Seeliefy.",
+      "description": "This 2024 institutional website is built using React, TypeScript, and Vite, with Bootstrap 5.3 for responsive design. The project follows frontend best practices, using Docker for consistent development environments and GitHub Actions for automating the CI/CD pipeline. This setup ensures a modern, responsive user experience and streamlined deployment.",
       "slug": "seeliefy",
+      "github": "https://github.com/v-motta/seeliefy",
+      "deployUrl": "https://seeliefy.com",
       "pathImages": [
         "/projects/seeliefy/seeliefy1.png",
         "/projects/seeliefy/seeliefy2.png",
@@ -77,6 +79,7 @@
       "technologies": [
         "react",
         "typescript",
+        "bootstrap",
         "docker",
         "githubactions"
       ]

@@ -16,6 +16,7 @@ const config: Config = {
         typescript: '#24A1C1',
         traefik: '#3178C6',
         javascript: '#F7DF1E',
+        bootstrap: '#7952B3',
         tailwind: '#06B6D4',
         react: '#61DAFB',
         vite: '#646CFF',

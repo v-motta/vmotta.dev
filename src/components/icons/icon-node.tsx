@@ -1,6 +1,7 @@
 import type { ReactNode } from 'react'
 import {
   AWSIcon,
+  BootstrapIcon,
   CloudflareIcon,
   CypressIcon,
   DockerIcon,
@@ -28,6 +29,7 @@ import {
 
 export const iconsNode: Record<string, ReactNode> = {
   aws: <AWSIcon />,
+  bootstrap: <BootstrapIcon />,
   cloudflare: <CloudflareIcon />,
   cypress: <CypressIcon />,
   docker: <DockerIcon />,
