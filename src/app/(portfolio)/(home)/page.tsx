@@ -154,9 +154,11 @@ export default async function HomePage() {
               <li>DevOps</li>
             </ul>
           </div> */}
-          <div className="grid grid-cols-5 gap-8 *:mx-auto *:size-full *:fill-zinc-50 lg:gap-16 xl:grid-cols-12">
+          <div className="grid grid-cols-5 gap-8 *:mx-auto *:size-14 *:fill-zinc-50 lg:gap-16 xl:grid-cols-12">
             {mainTechnologies.map((tech) => (
-              <div key={tech}>{iconsNode[tech]}</div>
+              <div className="*:size-full" key={tech}>
+                {iconsNode[tech]}
+              </div>
             ))}
           </div>
         </div>
