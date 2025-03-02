@@ -1,0 +1,26 @@
+{
+  "editor.defaultFormatter": "biomejs.biome",
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "explicit",
+    "source.organizeImports.biome": "explicit"
+  },
+  "cSpell.words": [
+    "cloudflare",
+    "figma",
+    "gitea",
+    "github",
+    "githubactions",
+    "linkedin",
+    "motta",
+    "reactnative",
+    "Rocketseat",
+    "sonner",
+    "traefik",
+    "vinicius",
+    "Vinicius",
+    "whatsapp"
+  ]
+}
