@@ -1,0 +1,93 @@
+import { Button } from '@/components/ui/button'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel'
+import { formatDistance } from 'date-fns'
+import { ArrowLeft, ArrowRight, Github } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { CarouselCardButtons } from './carousel-card-buttons'
+
+interface CardProjectProps {
+  project: {
+    id: string
+    title: string
+    subtitle: string
+    slug: string
+    github: string | null
+    imagesUrl: string[]
+    createdAt: Date
+  }
+}
+
+export function CardProject({ project }: CardProjectProps) {
+  const formattedDate = formatDistance(project.createdAt, new Date(), {
+    addSuffix: true,
+  })
+
+  return (
+    <div className="flex h-full flex-col gap-6 rounded-2xl border border-border p-6">
+      {project.imagesUrl.length > 0 ? (
+        <Carousel className="flex flex-col gap-y-4">
+          <CarouselContent>
+            {project.imagesUrl.map((imageUrl, index) => (
+              <CarouselItem key={imageUrl}>
+                <Image
+                  key={imageUrl}
+                  src={imageUrl}
+                  alt={project.title}
+                  width={1000}
+                  height={1000}
+                  quality={100}
+                  priority={index === 0}
+                  className="aspect-video rounded-lg border border-border"
+                />
+              </CarouselItem>
+            ))}
+          </CarouselContent>
+
+          <div className="flex items-center">
+            <CarouselCardButtons />
+
+            <p className="ml-auto text-zinc-500">{formattedDate}</p>
+          </div>
+        </Carousel>
+      ) : (
+        <div className="flex flex-col gap-y-4">
+          <div className="flex aspect-video items-center justify-center rounded-lg border border-border bg-secondary">
+            <h1>Project without image</h1>
+          </div>
+
+          <div className="flex h-9 items-center">
+            <p className="ml-auto text-zinc-400">{formattedDate}</p>
+          </div>
+        </div>
+      )}
+
+      <div className="flex-1 space-y-4">
+        <h1 className="font-extrabold text-2xl text-primary">
+          {project.title}
+        </h1>
+        <p>{project.subtitle}</p>
+      </div>
+
+      <div className="flex gap-x-6">
+        <Button variant="outline" className="flex-1" asChild>
+          <Link href={`/projects/${project.slug}`}>
+            All project details <ArrowRight />
+          </Link>
+        </Button>
+
+        {project.github && (
+          <Button variant="outline" size="icon" asChild>
+            <Link href={project.github} target="_blank" rel="noreferrer">
+              <Github />
+            </Link>
+          </Button>
+        )}
+      </div>
+    </div>
+  )
+}
