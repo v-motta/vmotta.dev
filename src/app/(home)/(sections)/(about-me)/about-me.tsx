@@ -2,10 +2,12 @@ export function AboutMe() {
   return (
     <section
       id="about_me"
-      className="h-screen bg-topography px-10 py-20 2xl:px-36"
+      className="bg-topography px-10 py-20 md:h-screen 2xl:px-36"
     >
-      <div className="h-full rounded-2xl border border-primary bg-zinc-900/75 p-6">
-        <h1 className="font-extrabold text-3xl">About me</h1>
+      <div className="h-full space-y-8 rounded-2xl border border-primary bg-zinc-900/75 p-6">
+        <h1 className="text-center font-extrabold text-xl md:text-start md:text-3xl">
+          About me
+        </h1>
         {/* <p className="text-balance text-2xl text-zinc-400">
           I am a passionate software engineer with a strong foundation in
           computer science and a diverse skill set in full-stack development. My
@@ -30,7 +32,7 @@ export function AboutMe() {
         </p> */}
 
         <div className="flex h-full items-center justify-center">
-          <p className="text-3xl text-zinc-400">Coming soon</p>
+          <p className="text-lg text-zinc-400 md:text-2xl">Coming soon</p>
         </div>
       </div>
     </section>
