@@ -36,7 +36,7 @@
   },
   "javascript": {
     "formatter": {
-      "arrowParentheses": "asNeeded",
+      "arrowParentheses": "always",
       "jsxQuoteStyle": "double",
       "quoteStyle": "single",
       "semicolons": "asNeeded",

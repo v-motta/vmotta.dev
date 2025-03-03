@@ -1,0 +1,62 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id       String @id @default(uuid())
+  name     String
+  email    String @unique
+  password String
+
+  tokenId String @unique @default(uuid())
+
+  @@map("users")
+}
+
+model Certificate {
+  id           String   @id @default(uuid())
+  title        String
+  slug         String   @unique
+  company      String
+  issueDate    DateTime @map("issue_date")
+  imageUrl     String   @map("image_url")
+  hourDuration Int      @map("hour_duration")
+  createdAt    DateTime @default(now()) @map("created_at")
+
+  technologies Technology[]
+
+  @@map("certificates")
+}
+
+model Project {
+  id          String   @id @default(uuid())
+  title       String
+  subtitle    String
+  description String
+  slug        String   @unique
+  github      String?
+  imagesUrl   String[] @map("images_url")
+  topProject  Boolean  @default(false) @map("top_project")
+  createdAt   DateTime @default(now()) @map("created_at")
+
+  technologies Technology[]
+
+  @@map("projects")
+}
+
+model Technology {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  stacks    String[]
+  createdAt DateTime @default(now()) @map("created_at")
+
+  certificates Certificate[]
+  projects     Project[]
+
+  @@map("technologies")
+}
