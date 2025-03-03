@@ -1,0 +1,65 @@
+import { iconsNode } from '@/components/icons/icon-node'
+import { Button } from '@/components/ui/button'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+} from '@/components/ui/carousel'
+import { format, formatDistance } from 'date-fns'
+import { ArrowLeft, ArrowRight, Github } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Fragment } from 'react'
+
+interface CardCertificateProps {
+  certificate: {
+    technologies: string[]
+    id: string
+    title: string
+    slug: string
+    company: string
+    issueDate: Date
+    imageUrl: string
+    hourDuration: number
+  }
+}
+
+export function CardCertificate({ certificate }: CardCertificateProps) {
+  const formattedDate = formatDistance(certificate.issueDate, new Date(), {
+    addSuffix: true,
+  })
+
+  return (
+    <div className="flex h-full flex-col gap-6 rounded-2xl border border-border bg-background/75 p-6">
+      <Image
+        src={certificate.imageUrl}
+        alt={certificate.title}
+        width={1000}
+        height={1000}
+        quality={100}
+        priority
+        className="aspect-auto rounded-lg border border-border"
+      />
+
+      <h1 className="flex-1 font-extrabold text-2xl text-primary">
+        {certificate.title}
+      </h1>
+
+      <div className="space-y-6">
+        <div className="flex flex-wrap gap-4">
+          {certificate.technologies.map((technology) => (
+            <Fragment key={technology}>{iconsNode[technology]}</Fragment>
+          ))}
+        </div>
+
+        <div className="space-y-2 text-zinc-400">
+          <p>Workload: {certificate.hourDuration} hours</p>
+          <p>
+            Issued by {certificate.company} {formattedDate} on{' '}
+            {format(certificate.issueDate, 'dd MMM yyyy')}
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}

@@ -76,6 +76,7 @@
 }
 
 @theme inline {
+  --topography: url("/topography.svg");
   --font-mono: var(--font-jet-brains-mono);
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -114,6 +115,11 @@
 .rocket {
   display: inline-block;
   animation: rocket-animation 2s infinite;
+}
+
+.bg-topography {
+  background-image: var(--topography);
+  box-shadow: inset 0 0 100px 20px #18181b;
 }
 
 @keyframes rocket-animation {
