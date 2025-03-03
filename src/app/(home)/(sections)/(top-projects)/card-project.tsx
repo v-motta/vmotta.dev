@@ -51,7 +51,7 @@ export function CardProject({ project }: CardProjectProps) {
           <div className="flex items-center">
             <CarouselCardButtons />
 
-            <p className="ml-auto text-zinc-500">{formattedDate}</p>
+            <p className="ml-auto text-zinc-400">{formattedDate}</p>
           </div>
         </Carousel>
       ) : (
