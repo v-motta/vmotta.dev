@@ -40,7 +40,7 @@ export function Header() {
   ]
 
   return (
-    <header className="sticky top-0 z-50 h-16 w-full border-b border-b-zinc-800 bg-background/95 px-5 shadow-md xl:px-36">
+    <header className="sticky top-0 z-50 h-16 w-full border-b border-b-border bg-background/95 px-5 xl:px-36">
       <div className="flex h-16 items-center justify-between">
         <Link
           href="/"
@@ -105,7 +105,7 @@ export function Header() {
                 ))}
               </nav>
 
-              <Separator className="bg-zinc-800" />
+              <Separator className="bg-border" />
 
               <div className="flex items-center justify-center gap-x-4">
                 {socialLinks.map((link) => (

@@ -29,7 +29,7 @@ export default async function Certificates() {
       <div className="flex flex-col items-center justify-between gap-y-4 sm:flex-row">
         <h1 className="font-extrabold text-2xl">All my certificates</h1>
 
-        <p className="text-zinc-400">
+        <p className="text-muted-foreground">
           Showing{' '}
           <span className="font-extrabold">{allCertificates.length}</span>{' '}
           certificates

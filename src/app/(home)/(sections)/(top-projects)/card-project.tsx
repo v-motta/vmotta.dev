@@ -50,7 +50,7 @@ export function CardProject({ project }: CardProjectProps) {
           <div className="flex items-center">
             <CarouselCardButtons />
 
-            <p className="ml-auto text-zinc-400">{formattedDate}</p>
+            <p className="ml-auto text-muted-foreground">{formattedDate}</p>
           </div>
         </Carousel>
       ) : (
@@ -60,7 +60,7 @@ export function CardProject({ project }: CardProjectProps) {
           </div>
 
           <div className="flex h-9 items-center">
-            <p className="ml-auto text-zinc-400">{formattedDate}</p>
+            <p className="ml-auto text-muted-foreground">{formattedDate}</p>
           </div>
         </div>
       )}

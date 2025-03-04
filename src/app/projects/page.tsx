@@ -20,7 +20,7 @@ export default async function Projects() {
       <div className="flex flex-col items-center justify-between gap-y-4 sm:flex-row">
         <h1 className="font-extrabold text-2xl">All my projects</h1>
 
-        <p className="text-zinc-400">
+        <p className="text-muted-foreground">
           Showing <span className="font-extrabold">{allProjects.length}</span>{' '}
           projects
         </p>

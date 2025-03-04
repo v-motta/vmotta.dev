@@ -4,7 +4,7 @@ export function AboutMe() {
       id="about_me"
       className="bg-topography px-10 py-20 md:h-screen 2xl:px-36"
     >
-      <div className="h-full space-y-8 rounded-2xl border border-primary bg-zinc-900/75 p-6">
+      <div className="h-full space-y-8 rounded-2xl border border-primary bg-background/75 p-6">
         <h1 className="text-center font-extrabold text-xl md:text-start md:text-3xl">
           About me
         </h1>
@@ -32,7 +32,9 @@ export function AboutMe() {
         </p> */}
 
         <div className="flex h-full items-center justify-center">
-          <p className="text-lg text-zinc-400 md:text-2xl">Coming soon</p>
+          <p className="text-lg text-muted-foreground md:text-2xl">
+            Coming soon
+          </p>
         </div>
       </div>
     </section>

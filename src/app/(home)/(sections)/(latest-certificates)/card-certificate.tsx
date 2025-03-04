@@ -43,7 +43,7 @@ export function CardCertificate({ certificate }: CardCertificateProps) {
           ))}
         </div>
 
-        <div className="space-y-2 text-zinc-400">
+        <div className="space-y-2 text-muted-foreground">
           <p>Workload: {certificate.hourDuration} hours</p>
           <p>
             Issued by {certificate.company} {formattedDate} on{' '}

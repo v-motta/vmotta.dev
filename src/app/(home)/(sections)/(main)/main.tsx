@@ -16,7 +16,7 @@ export function Main() {
             <span className="rocket">🚀</span> Full-Stack Developer
           </p>
 
-          <p className="text-balance text-base text-zinc-400 xl:text-lg">
+          <p className="text-balance text-base text-muted-foreground xl:text-lg">
             Currently graduating a degree in Computer Science, with professional
             experience in TypeScript, React, Angular, Bootstrap, Go, Flutter,
             and DevOps.
