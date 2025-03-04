@@ -49,10 +49,17 @@ model Project {
   @@map("projects")
 }
 
+enum StackType {
+  frontend
+  backend
+  database
+  devops
+}
+
 model Technology {
   id        String   @id @default(uuid())
   name      String   @unique
-  stacks    String[]
+  stacks    StackType[]
   createdAt DateTime @default(now()) @map("created_at")
 
   certificates Certificate[]
