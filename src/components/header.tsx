@@ -1,7 +1,7 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { Github, Linkedin, Menu, Twitter } from 'lucide-react'
+import { Menu, Twitter } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
@@ -42,15 +42,14 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 h-16 w-full border-b border-b-zinc-800 bg-background/95 px-5 shadow-md xl:px-36">
       <div className="flex h-16 items-center justify-between">
-        <Link href="/">
-          <h1
-            className={cn(
-              'font-extrabold text-2xl',
-              pathname === '/' && 'text-primary'
-            )}
-          >
-            {'</vmotta.dev>'}
-          </h1>
+        <Link
+          href="/"
+          className={cn(
+            'font-extrabold text-2xl hover:underline hover:underline-offset-8',
+            pathname === '/' && 'text-primary'
+          )}
+        >
+          {'</vmotta.dev>'}
         </Link>
 
         <nav className="hidden gap-8 lg:flex">
@@ -58,7 +57,10 @@ export function Header() {
             <Link
               key={name}
               href={href}
-              className={cn('font-medium', pathname === href && 'text-primary')}
+              className={cn(
+                'font-medium hover:underline hover:underline-offset-8',
+                pathname === href && 'text-primary'
+              )}
             >
               {name}
             </Link>
@@ -70,7 +72,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="text-muted-foreground transition-colors hover:text-foreground"
+              className="transition-colors hover:text-primary"
               aria-label={link.name}
             >
               {link.icon}
