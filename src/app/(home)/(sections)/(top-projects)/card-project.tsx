@@ -28,7 +28,7 @@ export function CardProject({ project }: CardProjectProps) {
   })
 
   return (
-    <div className="flex h-full flex-col gap-6 rounded-2xl border border-border p-6">
+    <div className="flex h-full flex-col gap-4 rounded-2xl border border-border p-4 md:gap-6 md:p-6">
       {project.imagesUrl.length > 0 ? (
         <Carousel className="flex flex-col gap-y-4">
           <CarouselContent>
@@ -41,7 +41,6 @@ export function CardProject({ project }: CardProjectProps) {
                   width={1000}
                   height={1000}
                   quality={100}
-                  priority={index === 0}
                   className="aspect-video rounded-lg border border-border"
                 />
               </CarouselItem>
@@ -67,13 +66,13 @@ export function CardProject({ project }: CardProjectProps) {
       )}
 
       <div className="flex-1 space-y-4">
-        <h1 className="font-extrabold text-2xl text-primary">
+        <h1 className="font-extrabold text-primary text-xl md:text-2xl">
           {project.title}
         </h1>
         <p>{project.subtitle}</p>
       </div>
 
-      <div className="flex gap-x-6">
+      <div className="flex gap-x-4 md:gap-x-6">
         <Button variant="outline" className="flex-1" asChild>
           <Link href={`/projects/${project.slug}`}>
             All project details <ArrowRight />

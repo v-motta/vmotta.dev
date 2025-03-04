@@ -30,18 +30,17 @@ export function CardCertificate({ certificate }: CardCertificateProps) {
   })
 
   return (
-    <div className="flex h-full flex-col gap-6 rounded-2xl border border-border bg-background/75 p-6">
+    <div className="flex h-full flex-col gap-4 rounded-2xl border border-border bg-background/75 p-4 md:gap-6 md:p-6">
       <Image
         src={certificate.imageUrl}
         alt={certificate.title}
         width={1000}
         height={1000}
         quality={100}
-        priority
         className="aspect-auto rounded-lg border border-border"
       />
 
-      <h1 className="flex-1 font-extrabold text-2xl text-primary">
+      <h1 className="flex-1 font-extrabold text-primary text-xl md:text-2xl">
         {certificate.title}
       </h1>
 

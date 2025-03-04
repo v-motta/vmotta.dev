@@ -23,11 +23,11 @@ export async function TopProjects() {
   return (
     <section
       id="top_projects"
-      className="flex h-screen flex-col gap-10 px-10 py-10 2xl:gap-20 2xl:px-36 2xl:py-20"
+      className="flex flex-col gap-10 px-5 py-10 md:px-20 lg:px-5 2xl:h-screen 2xl:gap-20 2xl:px-36 2xl:py-20"
     >
       <h1 className="text-center font-extrabold text-3xl">Top projects</h1>
 
-      <div className="grid h-full grid-cols-3 gap-x-6">
+      <div className="grid h-full gap-x-6 gap-y-5 lg:grid-cols-3">
         {topThreeProjects.map((project) => (
           <CardProject key={project.id} project={project} />
         ))}

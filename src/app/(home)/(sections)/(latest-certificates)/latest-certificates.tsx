@@ -33,13 +33,13 @@ export async function LatestCertificates() {
   return (
     <section
       id="latest_certificates"
-      className="flex h-screen flex-col gap-10 bg-topography px-10 py-10 2xl:gap-20 2xl:px-36 2xl:py-20"
+      className="flex flex-col gap-10 bg-topography px-5 py-10 md:px-20 lg:px-5 2xl:h-screen 2xl:gap-20 2xl:px-36 2xl:py-20"
     >
       <h1 className="text-center font-extrabold text-3xl">
         Latest certificates
       </h1>
 
-      <div className="grid h-full grid-cols-3 gap-x-6">
+      <div className="grid h-full gap-x-6 gap-y-5 lg:grid-cols-3">
         {latestCertificatesSimplified.map((certificate) => (
           <CardCertificate key={certificate.id} certificate={certificate} />
         ))}

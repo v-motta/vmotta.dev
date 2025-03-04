@@ -1,3 +1,5 @@
+import myself from '@/../public/myself.png'
+import Image from 'next/image'
 import { ScrollDownIcon } from '../../scroll-down-icon'
 
 export function Main() {
@@ -23,8 +25,15 @@ export function Main() {
       </div>
 
       <div className="md: order-first w-2/3 sm:w-1/2 md:w-1/3 lg:order-last lg:w-auto">
-        <div className="flex aspect-square items-center justify-center rounded-full border border-primary">
-          <span>My photo</span>
+        <div className="flex aspect-square items-center justify-center rounded-full bg-primary/20">
+          <Image
+            src={myself}
+            alt=""
+            priority
+            quality={100}
+            className="rounded-full grayscale-75"
+          />
+          {/* <span>My photo</span> */}
         </div>
       </div>
 
