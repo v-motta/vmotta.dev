@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
+import { Footer } from '@/components/footer'
 import { Header } from '@/components/header'
 import { Providers } from './providers'
 
@@ -27,6 +28,8 @@ export default function RootLayout({
           <Header />
 
           {children}
+
+          <Footer />
         </Providers>
       </body>
     </html>
