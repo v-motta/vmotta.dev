@@ -9,6 +9,7 @@ export default async function Projects() {
       subtitle: true,
       slug: true,
       github: true,
+      deployUrl: true,
       imagesUrl: true,
       createdAt: true,
     },

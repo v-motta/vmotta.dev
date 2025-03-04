@@ -40,6 +40,7 @@ model Project {
   description String
   slug        String   @unique
   github      String?
+  deployUrl   String?
   imagesUrl   String[] @map("images_url")
   topProject  Boolean  @default(false) @map("top_project")
   createdAt   DateTime @default(now()) @map("created_at")

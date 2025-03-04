@@ -6,7 +6,7 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel'
 import { formatDistance } from 'date-fns'
-import { ArrowRight } from 'lucide-react'
+import { ArrowRight, Globe } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CarouselCardButtons } from './carousel-card-buttons'
@@ -18,6 +18,7 @@ interface CardProjectProps {
     subtitle: string
     slug: string
     github: string | null
+    deployUrl: string | null
     imagesUrl: string[]
     createdAt: Date
   }
@@ -81,7 +82,12 @@ export function CardProject({ project }: CardProjectProps) {
         </Button>
 
         {project.github && (
-          <Button variant="outline" size="icon" asChild>
+          <Button
+            variant="outline"
+            size="icon"
+            className="hidden xl:flex"
+            asChild
+          >
             <Link
               href={project.github}
               target="_blank"
@@ -89,6 +95,24 @@ export function CardProject({ project }: CardProjectProps) {
               aria-label={`Github repository of ${project.title} link`}
             >
               <GitHubIcon />
+            </Link>
+          </Button>
+        )}
+
+        {project.deployUrl && (
+          <Button
+            variant="outline"
+            size="icon"
+            className="hidden xl:flex"
+            asChild
+          >
+            <Link
+              href={project.deployUrl}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Live demo of ${project.title} link`}
+            >
+              <Globe />
             </Link>
           </Button>
         )}
