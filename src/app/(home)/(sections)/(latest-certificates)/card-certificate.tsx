@@ -38,9 +38,11 @@ export function CardCertificate({ certificate }: CardCertificateProps) {
 
       <div className="space-y-6">
         <div className="flex flex-wrap gap-4">
-          {certificate.technologies.map((technology) => (
-            <Fragment key={technology}>{iconsNode[technology]}</Fragment>
-          ))}
+          {certificate.technologies.map((technology) => {
+            const Icon = iconsNode[technology]
+
+            return <Icon key={technology} />
+          })}
         </div>
 
         <div className="space-y-2 text-muted-foreground">
