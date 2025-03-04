@@ -1,3 +1,4 @@
+import { GitHubIcon } from '@/components/icons'
 import { Button } from '@/components/ui/button'
 import {
   Carousel,
@@ -5,7 +6,7 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel'
 import { formatDistance } from 'date-fns'
-import { ArrowRight, Github } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CarouselCardButtons } from './carousel-card-buttons'
@@ -81,8 +82,13 @@ export function CardProject({ project }: CardProjectProps) {
 
         {project.github && (
           <Button variant="outline" size="icon" asChild>
-            <Link href={project.github} target="_blank" rel="noreferrer">
-              <Github />
+            <Link
+              href={project.github}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`Github repository of ${project.title} link`}
+            >
+              <GitHubIcon />
             </Link>
           </Button>
         )}
