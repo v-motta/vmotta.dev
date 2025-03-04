@@ -39,9 +39,9 @@ export function CardProject({ project }: CardProjectProps) {
                   key={imageUrl}
                   src={imageUrl}
                   alt={project.title}
-                  width={1000}
-                  height={1000}
-                  quality={100}
+                  width={800}
+                  height={400}
+                  quality={50}
                   className="aspect-video rounded-lg border border-border"
                 />
               </CarouselItem>

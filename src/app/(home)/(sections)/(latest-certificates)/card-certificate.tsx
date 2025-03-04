@@ -26,9 +26,9 @@ export function CardCertificate({ certificate }: CardCertificateProps) {
       <Image
         src={certificate.imageUrl}
         alt={certificate.title}
-        width={1000}
-        height={1000}
-        quality={100}
+        width={800}
+        height={400}
+        quality={50}
         className="aspect-auto rounded-lg border border-border"
       />
 
