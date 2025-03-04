@@ -1,11 +1,11 @@
 'use client'
 
 import { cn } from '@/lib/utils'
-import { Menu, Twitter } from 'lucide-react'
+import { Menu } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
-import { GitHubIcon, LinkedInIcon } from './icons'
+import { GitHubIcon, LinkedInIcon, WhatsAppIcon } from './icons'
 import { Button } from './ui/button'
 import { Separator } from './ui/separator'
 import { Sheet, SheetContent, SheetTitle, SheetTrigger } from './ui/sheet'
@@ -23,19 +23,19 @@ export function Header() {
 
   const socialLinks = [
     {
-      href: 'https://github.com',
+      href: 'https://github.com/v-motta',
       icon: <GitHubIcon className="h-5 w-5" />,
       name: 'GitHub',
     },
     {
-      href: 'https://twitter.com',
-      icon: <Twitter className="h-5 w-5" />,
-      name: 'Twitter',
-    },
-    {
-      href: 'https://linkedin.com',
+      href: 'https://linkedin.com/in/viniciusmottadacosta/',
       icon: <LinkedInIcon className="h-5 w-5" />,
       name: 'LinkedIn',
+    },
+    {
+      href: 'https://wa.me/5511987977427',
+      icon: <WhatsAppIcon className="h-5 w-5" />,
+      name: 'WhatsApp',
     },
   ]
 
@@ -57,6 +57,7 @@ export function Header() {
             <Link
               key={name}
               href={href}
+              aria-label={name}
               className={cn(
                 'font-medium hover:underline hover:underline-offset-8',
                 pathname === href && 'text-primary'
@@ -74,6 +75,8 @@ export function Header() {
               href={link.href}
               className="transition-colors hover:text-primary"
               aria-label={link.name}
+              rel="noopener noreferrer"
+              target="_blank"
             >
               {link.icon}
             </Link>
@@ -109,7 +112,13 @@ export function Header() {
 
               <div className="flex items-center justify-center gap-x-4">
                 {socialLinks.map((link) => (
-                  <Link key={link.href} href={link.href} aria-label={link.name}>
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    aria-label={link.name}
+                    rel="noopener noreferrer"
+                    target="_blank"
+                  >
                     {link.icon}
                   </Link>
                 ))}
