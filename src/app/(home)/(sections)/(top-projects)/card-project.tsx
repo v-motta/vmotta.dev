@@ -5,7 +5,7 @@ import {
   CarouselItem,
 } from '@/components/ui/carousel'
 import { formatDistance } from 'date-fns'
-import { ArrowLeft, ArrowRight, Github } from 'lucide-react'
+import { ArrowRight, Github } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { CarouselCardButtons } from './carousel-card-buttons'
@@ -28,7 +28,7 @@ export function CardProject({ project }: CardProjectProps) {
   })
 
   return (
-    <div className="flex h-full flex-col gap-4 rounded-2xl border border-border p-4 md:gap-6 md:p-6">
+    <div className="flex h-full flex-col gap-4 rounded-2xl border border-border bg-background/75 p-4 md:gap-6 md:p-6">
       {project.imagesUrl.length > 0 ? (
         <Carousel className="flex flex-col gap-y-4">
           <CarouselContent>
