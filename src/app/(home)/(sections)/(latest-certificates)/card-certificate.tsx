@@ -1,14 +1,6 @@
 import { iconsNode } from '@/components/icons/icon-node'
-import { Button } from '@/components/ui/button'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from '@/components/ui/carousel'
 import { format, formatDistance } from 'date-fns'
-import { ArrowLeft, ArrowRight, Github } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { Fragment } from 'react'
 
 interface CardCertificateProps {
