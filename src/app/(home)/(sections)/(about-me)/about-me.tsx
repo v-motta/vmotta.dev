@@ -2,7 +2,7 @@ export function AboutMe() {
   return (
     <section
       id="about_me"
-      className="bg-topography px-10 py-20 md:h-screen 2xl:px-36"
+      className="bg-topography px-10 py-20 md:h-[calc(100vh-4rem)] 2xl:px-36"
     >
       <div className="h-full space-y-8 rounded-2xl border border-primary bg-background/75 p-6">
         <h1 className="text-center font-extrabold text-xl md:text-start md:text-3xl">
