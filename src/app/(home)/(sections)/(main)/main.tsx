@@ -25,7 +25,7 @@ export function Main() {
       </div>
 
       <div className="md: order-first w-2/3 sm:w-1/2 md:w-1/3 lg:order-last lg:w-auto">
-        <div className="flex aspect-square items-center justify-center rounded-full bg-primary/20">
+        <div className="image-container flex aspect-square items-center justify-center rounded-full bg-primary/20">
           <Image
             src={myself}
             alt=""
@@ -33,7 +33,6 @@ export function Main() {
             quality={100}
             className="rounded-full grayscale-75"
           />
-          {/* <span>My photo</span> */}
         </div>
       </div>
 
