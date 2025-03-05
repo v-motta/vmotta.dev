@@ -28,7 +28,7 @@ export function Main() {
         <div className="image-container flex aspect-square items-center justify-center rounded-full bg-primary/20">
           <Image
             src={myself}
-            alt=""
+            alt="Photo of Vinicius Motta"
             priority
             quality={100}
             className="rounded-full grayscale-75"
