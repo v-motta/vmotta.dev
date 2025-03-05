@@ -86,7 +86,7 @@ export default async function ProjectPage({
         </Carousel>
       )}
 
-      <div className="grid grid-cols-1 gap-10 xl:grid-cols-2 2xl:grid-cols-[1.7fr_1fr]">
+      <div className="grid grid-cols-1 gap-5 md:gap-10 xl:grid-cols-2 2xl:grid-cols-[1.7fr_1fr]">
         <div className="space-y-6">
           <h2 className="text-xl">{projectDetails.subtitle}</h2>
           <p className="text-muted-foreground">{projectDetails.description}</p>
