@@ -38,7 +38,7 @@ export async function AllMyKnowledge() {
     >
       <h1 className="text-center font-extrabold text-3xl">All My Knowledge</h1>
 
-      <div className="grid h-full gap-px bg-primary lg:grid-cols-2 lg:grid-rows-2">
+      <div className="grid flex-1 gap-px bg-primary lg:grid-cols-2 lg:grid-rows-2">
         {groupedStacks.map(({ name, techs }) => (
           <div
             key={name}
