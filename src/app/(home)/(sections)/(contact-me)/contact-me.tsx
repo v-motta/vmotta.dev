@@ -6,7 +6,7 @@ export function ContactMe() {
   return (
     <section
       id="contact_me"
-      className="bg-topography px-5 py-20 md:px-20 lg:px-5 2xl:h-[calc(100vh-4rem)] 2xl:px-36"
+      className="bg-topography px-5 py-20 md:px-20 lg:px-5 2xl:min-h-[calc(100vh-4rem)] 2xl:px-36"
     >
       <div className="flex h-full flex-col gap-y-8 rounded-2xl border border-primary bg-background/75 p-6">
         <div className="grid flex-1 grid-cols-1 gap-10 sm:px-4 lg:grid-cols-[1fr_auto_1fr]">

@@ -24,7 +24,7 @@ export async function TopProjects() {
   return (
     <section
       id="top_projects"
-      className="flex flex-col gap-10 px-5 py-10 md:px-20 lg:px-5 2xl:h-[calc(100vh-4rem)] 2xl:gap-20 2xl:px-36 2xl:py-20"
+      className="flex flex-col gap-10 px-5 py-10 md:px-20 lg:px-5 2xl:min-h-[calc(100vh-4rem)] 2xl:gap-20 2xl:px-36 2xl:py-20"
     >
       <h1 className="text-center font-extrabold text-3xl">Top projects</h1>
 

@@ -4,7 +4,7 @@ import { ScrollDownIcon } from '../../scroll-down-icon'
 
 export function Main() {
   return (
-    <main className="relative flex flex-col items-center justify-center gap-10 px-5 py-10 text-center sm:px-10 md:px-20 lg:grid lg:h-[calc(100vh-4rem)] lg:grid-cols-[1.5fr_1fr] lg:text-start xl:grid-cols-[2fr_1fr] xl:gap-6 xl:px-36 2xl:grid-cols-[2fr_0.7fr]">
+    <main className="relative flex flex-col items-center justify-center gap-10 px-5 py-10 text-center sm:px-10 md:px-20 lg:grid lg:min-h-[calc(100vh-4rem)] lg:grid-cols-[1.5fr_1fr] lg:text-start xl:grid-cols-[2fr_1fr] xl:gap-6 xl:px-36 2xl:grid-cols-[2fr_0.7fr]">
       <div className="order-last lg:order-first">
         <div className="flex flex-col gap-4 xl:gap-6">
           <div>

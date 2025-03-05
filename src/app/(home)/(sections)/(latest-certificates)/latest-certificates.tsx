@@ -33,7 +33,7 @@ export async function LatestCertificates() {
   return (
     <section
       id="latest_certificates"
-      className="flex flex-col gap-10 bg-topography px-5 py-10 md:px-20 lg:px-5 2xl:h-[calc(100vh-4rem)] 2xl:gap-20 2xl:px-36 2xl:py-20"
+      className="flex flex-col gap-10 bg-topography px-5 py-10 md:px-20 lg:px-5 2xl:min-h-[calc(100vh-4rem)] 2xl:gap-20 2xl:px-36 2xl:py-20"
     >
       <h1 className="text-center font-extrabold text-3xl">
         Latest certificates
