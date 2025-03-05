@@ -69,8 +69,8 @@ export default async function ProjectPage({
                 <Image
                   src={imageUrl}
                   alt=""
-                  width={1000}
-                  height={1000}
+                  width={478}
+                  height={270}
                   className="rounded-lg border border-border"
                 />
               </CarouselItem>
