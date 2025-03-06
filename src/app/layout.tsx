@@ -13,6 +13,8 @@ const jetBrainsMono = JetBrains_Mono({
 export function generateMetadata(): Metadata {
   return {
     title: { template: '%s | vmotta.dev', default: 'vmotta.dev' },
+    description:
+      'Portfolio of Vinicius Motta, a Full-Stack Developer from Brazil. Here you can find information about me, my projects, certificates and my skills.',
     metadataBase: new URL('https://vmotta.dev'),
   }
 }
