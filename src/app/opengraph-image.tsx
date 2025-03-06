@@ -32,8 +32,9 @@ export default async function OpenGraphImage() {
         height: '100%',
         display: 'flex',
         alignItems: 'center',
-        padding: 32,
+        justifyContent: 'space-between',
         fontFamily: 'JetBrains Mono',
+        padding: '0 112px',
       }}
     >
       <div
@@ -41,6 +42,7 @@ export default async function OpenGraphImage() {
           display: 'flex',
           backgroundColor: 'rgba(249, 113, 128, 0.2)',
           borderRadius: 9999,
+          height: '65%',
         }}
       >
         <img
@@ -58,14 +60,13 @@ export default async function OpenGraphImage() {
         style={{
           display: 'flex',
           flexDirection: 'column',
-          marginLeft: 80,
           color: '#fafafa',
         }}
       >
-        <span style={{ fontSize: 20 }}>Hi, I am</span>
-        <span style={{ fontSize: 40, marginTop: -8 }}>Vinicius Motta</span>
+        <span style={{ fontSize: 24 }}>Hi, I am</span>
+        <span style={{ fontSize: 48, marginTop: -8 }}>Vinicius Motta</span>
 
-        <span style={{ fontSize: 32, color: '#f97180', marginTop: 24 }}>
+        <span style={{ fontSize: 36, color: '#f97180', marginTop: 24 }}>
           🚀 Full-Stack Developer
         </span>
       </p>
