@@ -40,8 +40,8 @@ export function CardProject({ project }: CardProjectProps) {
                   key={imageUrl}
                   src={imageUrl}
                   alt={project.title}
-                  width={500}
-                  height={281}
+                  width={795}
+                  height={447}
                   quality={50}
                   className="aspect-video rounded-lg border border-border"
                 />
