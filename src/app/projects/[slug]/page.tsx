@@ -1,7 +1,6 @@
 import { CarouselCardButtons } from '@/app/(home)/(sections)/(top-projects)/carousel-card-buttons'
 import { GitHubIcon } from '@/components/icons'
 import { iconsNode } from '@/components/icons/icon-node'
-import { Button } from '@/components/ui/button'
 import {
   Carousel,
   CarouselContent,
@@ -13,15 +12,10 @@ import { getCleanText } from '@/lib/clean-text'
 import { prisma } from '@/lib/prisma-client'
 import { Globe } from 'lucide-react'
 import Image from 'next/image'
-import Link from 'next/link'
 import { LinkButton } from './link-button'
 
-export default async function ProjectPage({
-  params,
-}: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params
-
-  const projectDetails = await prisma.project.findUnique({
+async function getProjectDetails(slug: string) {
+  return await prisma.project.findUnique({
     where: { slug },
     select: {
       title: true,
@@ -33,6 +27,41 @@ export default async function ProjectPage({
       technologies: { select: { name: true } },
     },
   })
+}
+
+export async function generateMetadata({
+  params,
+}: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+
+  const projectDetails = await getProjectDetails(slug)
+
+  if (!projectDetails)
+    return {
+      title: 'Project not found',
+      description: `Project with slug ${slug} does not appear to exist 😢`,
+    }
+
+  return {
+    title: `${projectDetails.title} Project`,
+    description: projectDetails.description,
+  }
+}
+
+export async function generateStaticParams() {
+  const projects = await prisma.project.findMany({
+    select: { slug: true },
+  })
+
+  return projects.map(({ slug }) => ({ slug }))
+}
+
+export default async function ProjectPage({
+  params,
+}: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params
+
+  const projectDetails = await getProjectDetails(slug)
 
   if (!projectDetails) {
     return (
@@ -69,8 +98,9 @@ export default async function ProjectPage({
                 <Image
                   src={imageUrl}
                   alt=""
-                  width={478}
-                  height={270}
+                  width={795}
+                  height={447}
+                  quality={50}
                   className="rounded-lg border border-border"
                 />
               </CarouselItem>
