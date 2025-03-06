@@ -10,10 +10,11 @@ const jetBrainsMono = JetBrains_Mono({
   subsets: ['latin'],
 })
 
-export const metadata: Metadata = {
-  title: 'vmotta.dev',
-  description:
-    'A simple portfolio of Vinicius Motta that contains some of my projects and certificates.',
+export function generateMetadata(): Metadata {
+  return {
+    title: { template: '%s | vmotta.dev', default: 'vmotta.dev' },
+    metadataBase: new URL('https://vmotta.dev'),
+  }
 }
 
 export default function RootLayout({
