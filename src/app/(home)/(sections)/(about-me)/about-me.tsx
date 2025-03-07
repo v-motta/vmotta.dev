@@ -9,52 +9,43 @@ export function AboutMe() {
           About me
         </h1>
 
-        <p className="text-muted-foreground">
-          Illo dignissimos error adipisci quod voluptas dolor est quisquam non,
-          ad deleniti doloribus. Obcaecati, explicabo velit! Id eius qui
-          voluptatem totam! Animi magni tempore omnis voluptatibus cumque, autem
-          quis minus facere ab, sit officia necessitatibus, rerum at. Molestias
-          mollitia, assumenda nobis consequuntur ipsam adipisci explicabo omnis
-          quisquam dolores nostrum ullam impedit! Reprehenderit, repellendus.
-          Accusantium nostrum dicta, ab vel adipisci commodi? Corrupti quis iste
-          accusamus sit consequatur quod, architecto vero saepe reprehenderit in
-          porro quam provident soluta illo laboriosam sunt, obcaecati
-          dignissimos? Voluptas obcaecati architecto mollitia quasi adipisci?
-          Expedita ex aperiam facere, unde repellat perferendis hic atque illum
-          maxime magnam omnis molestias, magni laudantium, animi eius ipsam
-          possimus qui. Ratione, velit expedita. Pariatur tempora nulla expedita
-          beatae, qui labore similique quo vero laboriosam porro aspernatur ex
-          quis cumque saepe? Nihil dolorum magni, odio quidem animi iusto,
-          nesciunt ex, sequi ipsa cupiditate error. Enim vitae tenetur saepe
-          voluptatum quas porro, laborum placeat dignissimos cumque quae.
-        </p>
+        <div className="space-y-4 text-lg text-muted-foreground">
+          <p>
+            👨‍💻 Hi, I'm Vinicius Motta, a passionate Full-Stack Developer who
+            loves building impactful tech solutions, always balancing
+            performance and design. With experience leading teams and developing
+            scalable applications, I have worked on projects ranging from
+            environmental preservation to financial markets, using technologies
+            like TypeScript, React, Node.js, Golang, and Python.
+          </p>
 
-        <p className="-translate-x-1/2 absolute top-1/2 left-1/2 text-nowrap bg-background/80 p-4 text-3xl text-muted-foreground uppercase lg:text-5xl">
-          Placeholder text
-        </p>
+          <p>
+            🤝 Collaboration is my driving force. I thrive in team environments
+            where I can share knowledge, learn from others, and grow together. I
+            believe technology is a powerful tool for solving problems and
+            making a real difference in the world.
+          </p>
 
-        {/* <p className="text-balance text-2xl text-zinc-400">
-          I am a passionate software engineer with a strong foundation in
-          computer science and a diverse skill set in full-stack development. My
-          journey began with a degree in Computer Science, where I honed my
-          problem-solving abilities and gained a deep understanding of
-          algorithms and data structures.
-        </p>
+          <p>
+            🎓 Currently, I'm pursuing a Bachelor’s degree in Computer Science
+            at Cruzeiro do Sul Virtual, continuously improving my technical
+            skills and exploring new development methodologies. I'm always eager
+            to learn new programming languages and stay updated with the latest
+            industry trends.
+          </p>
 
-        <p className="text-balance text-2xl text-zinc-400">
-          With hands-on experience in TypeScript, React, Angular, Bootstrap, Go,
-          and Flutter, I have successfully delivered projects that prioritize
-          user experience and performance. My expertise extends to DevOps
-          practices, enabling me to streamline development processes and ensure
-          seamless deployment.
-        </p>
+          <p>
+            ⚽🎮 Outside of coding, I’m passionate about soccer, video games,
+            and continuous learning. Whether it's tackling complex coding
+            challenges or strategizing the best play on the field, I love
+            challenges that push me forward.
+          </p>
 
-        <p className="text-balance text-2xl text-zinc-400">
-          I am committed to continuous learning and staying updated with the
-          latest industry trends. My goal is to leverage my skills to create
-          innovative solutions that make a positive impact on users and
-          businesses alike.
-        </p> */}
+          <p>
+            🚀 If you're looking for a developer focused on innovation, code
+            quality, and teamwork, let’s connect!
+          </p>
+        </div>
       </div>
     </section>
   )
