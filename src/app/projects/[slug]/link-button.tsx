@@ -15,7 +15,7 @@ export function LinkButton({ url, IconComponent }: LinkButtonProps) {
       asChild
     >
       <Link href={url}>
-        <IconComponent className="size-6" />
+        <IconComponent className="size-5" />
       </Link>
     </Button>
   )

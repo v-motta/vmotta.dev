@@ -94,7 +94,7 @@ export function CardProject({ project }: CardProjectProps) {
               rel="noreferrer"
               aria-label={`Github repository of ${project.title} link`}
             >
-              <GitHubIcon />
+              <GitHubIcon className="size-5" />
             </Link>
           </Button>
         )}
@@ -112,7 +112,7 @@ export function CardProject({ project }: CardProjectProps) {
               rel="noreferrer"
               aria-label={`Live demo of ${project.title} link`}
             >
-              <Globe />
+              <Globe className="size-5" />
             </Link>
           </Button>
         )}
