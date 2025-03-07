@@ -13,7 +13,8 @@ export function Main() {
           </div>
 
           <p className="text-2xl text-primary xl:text-3xl">
-            <span className="rocket">🚀</span> Full-Stack Developer
+            <span className="inline-block animate-rocket">🚀</span> Full-Stack
+            Developer
           </p>
 
           <p className="text-balance text-base text-muted-foreground xl:text-lg">

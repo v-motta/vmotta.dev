@@ -76,6 +76,16 @@
 }
 
 @theme inline {
+  --animate-rocket: rocket 2s ease-in-out infinite;
+  @keyframes rocket {
+    0%,
+    100% {
+      transform: translate(0, 0);
+    }
+    25% {
+      transform: translate(7px, -7px) rotate(-7deg);
+    }
+  }
   --topography: url("/topography.svg");
   --font-mono: var(--font-jet-brains-mono);
   --color-background: var(--background);
@@ -112,26 +122,9 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-.rocket {
-  display: inline-block;
-  animation: rocket-animation 2s infinite;
-}
-
 .bg-topography {
   background-image: var(--topography);
   box-shadow: inset 0 0 100px 20px var(--background);
-}
-
-@keyframes rocket-animation {
-  0% {
-    transform: translate(0, 0);
-  }
-  25% {
-    transform: translate(7px, -7px) rotate(-7deg);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
 }
 
 @layer base {
