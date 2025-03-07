@@ -43,7 +43,7 @@ export function CardProject({ project }: CardProjectProps) {
                   width={795}
                   height={447}
                   quality={50}
-                  className="aspect-video rounded-lg border border-border"
+                  className="aspect-video rounded-lg border border-border object-contain"
                 />
               </CarouselItem>
             ))}
