@@ -86,6 +86,21 @@
       transform: translate(7px, -7px) rotate(-7deg);
     }
   }
+
+  --animate-heartbeat: heartbeat 2s ease-in-out infinite;
+  @keyframes heartbeat {
+    0%,
+    50%,
+    100% {
+      transform: scale(1);
+      opacity: 0.7;
+    }
+    25%,
+    75% {
+      transform: scale(1.1);
+      opacity: 1;
+    }
+  }
   --topography: url("/topography.svg");
   --font-mono: var(--font-jet-brains-mono);
   --color-background: var(--background);
