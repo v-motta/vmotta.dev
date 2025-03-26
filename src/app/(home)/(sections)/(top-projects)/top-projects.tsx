@@ -4,6 +4,8 @@ import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { CardProject } from './card-project'
 
+export const revalidate = 60 // revalidate every 1 minute
+
 export async function TopProjects() {
   const topThreeProjects = await prisma.project.findMany({
     select: {

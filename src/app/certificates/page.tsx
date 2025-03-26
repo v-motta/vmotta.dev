@@ -2,6 +2,8 @@ import { getCleanText } from '@/lib/clean-text'
 import { prisma } from '@/lib/prisma-client'
 import { CardCertificate } from '../(home)/(sections)/(latest-certificates)/card-certificate'
 
+export const revalidate = 60 // revalidate every 1 minute
+
 export default async function Certificates() {
   const allCertificates = await prisma.certificate.findMany({
     select: {

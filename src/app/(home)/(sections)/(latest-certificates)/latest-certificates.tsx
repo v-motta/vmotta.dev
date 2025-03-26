@@ -5,6 +5,8 @@ import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 import { CardCertificate } from './card-certificate'
 
+export const revalidate = 60 // revalidate every 1 minute
+
 export async function LatestCertificates() {
   const latestCertificates = await prisma.certificate.findMany({
     select: {

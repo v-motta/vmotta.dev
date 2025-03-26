@@ -14,6 +14,8 @@ import { Globe } from 'lucide-react'
 import Image from 'next/image'
 import { LinkButton } from './link-button'
 
+export const revalidate = 60 // revalidate every 1 minute
+
 async function getProjectDetails(slug: string) {
   return await prisma.project.findUnique({
     where: { slug },
@@ -101,7 +103,7 @@ export default async function ProjectPage({
                   width={795}
                   height={447}
                   quality={50}
-                  className="rounded-lg border border-border"
+                  className="aspect-video rounded-lg border border-border object-contain"
                 />
               </CarouselItem>
             ))}

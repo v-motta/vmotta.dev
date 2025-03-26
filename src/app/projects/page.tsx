@@ -1,6 +1,8 @@
 import { prisma } from '@/lib/prisma-client'
 import { CardProject } from '../(home)/(sections)/(top-projects)/card-project'
 
+export const revalidate = 60 // revalidate every 1 minute
+
 export default async function Projects() {
   const allProjects = await prisma.project.findMany({
     select: {

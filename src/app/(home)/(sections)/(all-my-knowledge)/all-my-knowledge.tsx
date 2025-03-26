@@ -3,6 +3,8 @@ import { getCleanText } from '@/lib/clean-text'
 import { prisma } from '@/lib/prisma-client'
 import type { StackType } from '@prisma/client'
 
+export const revalidate = 60 // revalidate every 1 minute
+
 export async function AllMyKnowledge() {
   const allTechnologies = await prisma.technology.findMany({
     select: {
@@ -42,7 +44,7 @@ export async function AllMyKnowledge() {
         {groupedStacks.map(({ name, techs }) => (
           <div
             key={name}
-            className="flex flex-col gap-10 bg-background py-8 lg:py-5"
+            className="flex flex-col gap-10 bg-background px-0 py-8 md:px-8 lg:py-5 2xl:px-16"
           >
             <h1 className="text-center text-xl underline underline-offset-4">
               {name}
